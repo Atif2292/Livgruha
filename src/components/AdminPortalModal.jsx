@@ -3,7 +3,7 @@ import {
   X, ShieldCheck, Lock, LogOut, LayoutDashboard, Users, Image as ImageIcon, 
   Settings, MessageSquare, Phone, Download, Upload, Plus, Trash2, Edit3, 
   Save, RefreshCw, CheckCircle2, TrendingUp, Globe, FileText, Database, 
-  Key, AlertCircle, Sparkles, MapPin, Star, Clock, Copy, Check
+  Key, AlertCircle, Sparkles, MapPin, Star, Clock, Copy, Check, Eye, EyeOff
 } from 'lucide-react';
 import { useData } from '../context/DataContext';
 import { 
@@ -21,6 +21,7 @@ export default function AdminPortalModal({ isOpen, onClose }) {
 
   const [isAuthenticated, setIsAuthenticated] = useState(checkAdminAuth);
   const [pinInput, setPinInput] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [authError, setAuthError] = useState('');
 
   const [activeTab, setActiveTab] = useState('analytics'); // analytics, leads, banners, brand, projects, testimonials, cities, sheets, backup
@@ -334,35 +335,43 @@ export default function AdminPortalModal({ isOpen, onClose }) {
               </div>
 
               <div>
-                <h4 className="text-2xl font-serif font-bold text-gray-900">
-                  Administrator Access
+                <span className="px-3 py-1 rounded-full bg-[#FAF2ED] text-[#9B3F23] text-[10px] font-bold uppercase tracking-wider border border-[#E8CFCA]">
+                  Restricted Management Gate
+                </span>
+                <h4 className="text-2xl font-serif font-bold text-gray-900 mt-2">
+                  Admin & Leads Hub
                 </h4>
                 <p className="text-xs text-gray-600 mt-1">
-                  Enter your LivGruha Master PIN to access lead analytics, edit projects, and manage website content.
+                  Enter your confidential Administrator Password to access lead CRM, Google Sheets webhook, and CMS controls.
                 </p>
               </div>
 
               <form onSubmit={handleLogin} className="space-y-4">
                 {authError && (
-                  <div className="p-3 bg-red-50 border border-red-200 rounded-xl text-red-700 text-xs font-medium flex items-center gap-2 justify-center">
-                    <AlertCircle className="w-4 h-4" />
+                  <div className="p-3 bg-red-50 border border-red-200 rounded-xl text-red-700 text-xs font-medium flex items-center gap-2 justify-center animate-shake">
+                    <AlertCircle className="w-4 h-4 shrink-0" />
                     <span>{authError}</span>
                   </div>
                 )}
 
-                <div>
+                <div className="relative">
                   <input
-                    type="password"
+                    type={showPassword ? 'text' : 'password'}
                     required
                     autoFocus
-                    placeholder="Enter Master PIN (Default: livgruha2026)"
+                    placeholder="Enter Admin Password"
                     value={pinInput}
                     onChange={(e) => setPinInput(e.target.value)}
-                    className="w-full px-4 py-3 text-center text-sm font-mono tracking-widest rounded-2xl border border-gray-300 focus:border-[#9B3F23] focus:ring-2 focus:ring-[#9B3F23]/20 outline-none bg-white"
+                    className="w-full pl-4 pr-11 py-3 text-center text-sm font-mono tracking-wider rounded-2xl border border-gray-300 focus:border-[#9B3F23] focus:ring-2 focus:ring-[#9B3F23]/20 outline-none bg-white shadow-inner"
                   />
-                  <p className="text-[11px] text-gray-400 mt-1.5">
-                    Default Master PIN: <code className="font-mono text-[#9B3F23] font-bold">livgruha2026</code>
-                  </p>
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute right-3.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 p-1 cursor-pointer"
+                    title={showPassword ? "Hide password" : "Show password"}
+                  >
+                    {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                  </button>
                 </div>
 
                 <button
@@ -370,7 +379,7 @@ export default function AdminPortalModal({ isOpen, onClose }) {
                   className="w-full py-3.5 px-6 rounded-2xl font-bold text-xs uppercase tracking-wider text-white bg-[#9B3F23] hover:bg-[#83341C] shadow-lg shadow-[#9B3F23]/25 transition-all cursor-pointer flex items-center justify-center gap-2"
                 >
                   <Key className="w-4 h-4" />
-                  <span>Unlock Admin Dashboard</span>
+                  <span>Authenticate & Open Portal</span>
                 </button>
               </form>
             </div>

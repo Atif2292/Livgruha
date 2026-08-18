@@ -29,3 +29,4 @@ debug-test.js
 capture-mobile-screens.js
 capture-clean-screens.js
 save-all-screenshots.js
+.vercel

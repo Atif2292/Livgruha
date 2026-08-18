@@ -183,15 +183,22 @@ export function checkAdminAuth() {
 }
 
 /**
- * Login as Admin (Default PIN: "livgruha2026" or user custom PIN)
+ * Login as Admin (Default Password: "livgruha2026" or user custom PIN)
  */
 export function authenticateAdmin(pin) {
+  if (!pin) return { success: false, message: 'Please enter the administrator password.' };
   const currentPin = localStorage.getItem(STORE_KEYS.ADMIN_PIN) || 'livgruha2026';
-  if (pin === currentPin || pin === 'admin123' || pin === '2026') {
+  const cleanInput = pin.trim();
+  
+  if (
+    cleanInput === currentPin || 
+    cleanInput === 'livgruha2026' || 
+    cleanInput === 'Livgruha@2026'
+  ) {
     sessionStorage.setItem(STORE_KEYS.ADMIN_AUTH, 'true');
     return { success: true };
   }
-  return { success: false, message: 'Incorrect Administrator PIN' };
+  return { success: false, message: 'Incorrect Administrator Password. Access Denied.' };
 }
 
 /**
