@@ -1,0 +1,6 @@
+# Robots.txt for LivGruha Interiors (livgruhainteriors.com)
+User-agent: *
+Allow: /
+Disallow: /admin
+
+Sitemap: https://livgruhainteriors.com/sitemap.xml
