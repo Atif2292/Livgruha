@@ -51,22 +51,13 @@ export default function Navbar({ activePage, setActivePage, open3DModal, openEst
             </span>
           </div>
           <div className="hidden md:flex items-center gap-3.5 text-xs text-white/90">
-            {/* Admin Control Portal Button */}
-            <button 
-              onClick={openAdminPortal}
-              className="hover:underline flex items-center gap-1 text-amber-200 hover:text-white font-semibold cursor-pointer"
-              title="Open LivGruha Admin & Lead Tracking Portal (Points 18 & 19)"
-            >
-              <ShieldCheck className="w-3.5 h-3.5" />
-              <span>Admin Portal</span>
-            </button>
-            <span>•</span>
             <a 
               href={`tel:${(brand.phone || '').replace(/[^0-9]/g, '')}`} 
               onClick={handleCallClick}
-              className="hover:underline font-semibold"
+              className="hover:underline font-semibold flex items-center gap-1.5"
             >
-              Call: {brand.phone}
+              <Phone className="w-3.5 h-3.5 text-amber-200" />
+              <span>Studio Hotline: {brand.phone}</span>
             </a>
           </div>
         </div>
@@ -201,21 +192,6 @@ export default function Navbar({ activePage, setActivePage, open3DModal, openEst
               <div className="flex items-center gap-2">
                 <Layers className="w-4 h-4" />
                 <span>Custom Design Planner</span>
-              </div>
-              <ChevronRight className="w-4 h-4 opacity-50" />
-            </button>
-
-            {/* Mobile Admin Portal button */}
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                openAdminPortal();
-              }}
-              className="w-full flex items-center justify-between px-4 py-2.5 rounded-2xl text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200"
-            >
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#9B3F23]" />
-                <span>Admin & Lead Tracking Portal</span>
               </div>
               <ChevronRight className="w-4 h-4 opacity-50" />
             </button>

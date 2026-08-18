@@ -48,6 +48,49 @@ export default function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  // Secret URL routing & Hotkey listener for Admin Portal
+  useEffect(() => {
+    const checkAdminRoute = () => {
+      const hash = (window.location.hash || '').toLowerCase();
+      const pathname = (window.location.pathname || '').toLowerCase();
+      const search = (window.location.search || '').toLowerCase();
+
+      if (
+        hash === '#admin' || 
+        hash === '#/admin' || 
+        hash === '#admin-portal' ||
+        pathname === '/admin' || 
+        pathname === '/admin-portal' ||
+        search.includes('admin=true') ||
+        search.includes('portal=true')
+      ) {
+        setIsAdminModalOpen(true);
+      }
+    };
+
+    // Check immediately on page mount
+    checkAdminRoute();
+
+    // Listen to URL hash or navigation changes
+    window.addEventListener('hashchange', checkAdminRoute);
+    window.addEventListener('popstate', checkAdminRoute);
+
+    // Secret Hotkey: Ctrl + Shift + A or Cmd + Shift + A
+    const handleKeyDown = (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
+        e.preventDefault();
+        setIsAdminModalOpen(prev => !prev);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('hashchange', checkAdminRoute);
+      window.removeEventListener('popstate', checkAdminRoute);
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
   const handleCloseWelcome = () => {
     setIsWelcomeModalOpen(false);
     sessionStorage.setItem('livgruha_welcome_dismissed', 'true');

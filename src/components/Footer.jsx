@@ -168,22 +168,6 @@ export default function Footer({ setActivePage, open3DModal, openEstimatorModal,
                 </li>
               ))}
             </ul>
-
-            <div className="pt-4 space-y-2">
-              <button
-                onClick={openAdminPortal}
-                className="text-[11px] text-amber-300 hover:text-amber-200 font-semibold flex items-center gap-1.5 cursor-pointer"
-              >
-                <ShieldCheck className="w-3.5 h-3.5" />
-                <span>Admin & Lead Tracking Portal</span>
-              </button>
-              <button
-                onClick={openConfigModal}
-                className="text-[11px] text-gray-400 hover:text-gray-300 flex items-center gap-1 cursor-pointer block"
-              >
-                <span>⚙️ Google Sheet Webhook Sync</span>
-              </button>
-            </div>
           </div>
         </div>
 
