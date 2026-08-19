@@ -7,8 +7,8 @@
  */
 import { getActiveAttribution, trackEvent } from './analytics';
 
-// Default endpoint placeholder or environment variable
-export const DEFAULT_WEBHOOK_URL = '';
+// Default Webhook endpoint for LivGruha Leads Google Sheet
+export const DEFAULT_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbwSga-kVJw2lrDlgcYcyDGYM6QLgb5ls1WiwOtEj905LVWcRZBoXGF-olOM0t0K6iUYkg/exec';
 
 /**
  * Get configured Google Sheets Webhook URL
