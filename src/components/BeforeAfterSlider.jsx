@@ -18,9 +18,9 @@ const TRANSFORMATION_PROJECTS = [
     project: 'Aparna Serene Park, Hyderabad - 3 BHK',
     beforeImage: '/transformations/living-before.jpg',
     afterImage: '/transformations/living-after.jpg',
-    beforeLabel: 'Unfinished Concrete Hall (Day 0)',
+    beforeLabel: 'Bare Civil Living Hall (Day 0)',
     afterLabel: 'Japandi Living Suite (Day 21)',
-    highlights: 'Oak Wall Fluting • Concealed Cable Routing • 3000K Warm Profile Cove • Italian Marble Flooring'
+    highlights: 'Oak Fluted Wall Paneling • Floating Charcoal Console • 3000K Perimeter Cove • Italian Marble Flooring'
   },
   {
     id: 'bedroom',
