@@ -23,7 +23,6 @@ export default function Navbar({ activePage, setActivePage, open3DModal, openEst
     { id: 'interior', label: 'Services' },
     { id: 'portfolio', label: 'Projects' },
     { id: 'how-it-works', label: 'How It Works' },
-    { id: 'cities', label: 'Branches' },
     { id: 'contact', label: 'Contact' },
   ];
 

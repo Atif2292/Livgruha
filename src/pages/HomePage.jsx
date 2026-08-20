@@ -472,8 +472,8 @@ export default function HomePage({ open3DModal, openEstimatorModal, setActivePag
                 <div className="flex items-start gap-2.5">
                   <MapPin className="w-4 h-4 text-[#9B3F23] shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold text-gray-900 block">Financial District Flagship Pavilion:</span>
-                    <span>Plot No. 42, Silicon Valley Layout, Near WaveRock, Hitec City / Madhapur, Hyderabad - 500081</span>
+                    <span className="font-bold text-gray-900 block">Service Hub & Operations:</span>
+                    <span>Hyderabad, Telangana, India</span>
                   </div>
                 </div>
 

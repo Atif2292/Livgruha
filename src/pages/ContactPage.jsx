@@ -144,17 +144,17 @@ export default function ContactPage({ open3DModal, openEstimatorModal }) {
             <div className="bg-white rounded-3xl border border-[#E6DFD5] p-6 shadow-sm space-y-3">
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#9B3F23]">
                 <MapPin className="w-4 h-4" />
-                <span>Hyderabad Head Office & Flagship Studio</span>
+                <span>Hyderabad Operations & Design Hub</span>
               </div>
               <h4 className="text-base font-serif font-bold text-gray-900">
-                Financial District Design Pavilion
+                LivGruha Interiors — Hyderabad
               </h4>
               <p className="text-xs text-gray-600 leading-relaxed">
-                Plot No. 42, Silicon Valley Layout, Near WaveRock, Hitec City / Madhapur, Hyderabad, Telangana - 500081
+                Hyderabad, Telangana, India
               </p>
               <div className="pt-2 text-[11px] text-gray-500 flex items-center gap-2">
-                <Clock className="w-3.5 h-3.5" />
-                <span>Free Valet Parking Available • 3BHK Full Scale Walkthrough Mockup</span>
+                <Clock className="w-3.5 h-3.5 text-[#9B3F23]" />
+                <span>Direct Hotline: +91 79956 72323 • On-Site & Virtual 3D Consultations</span>
               </div>
             </div>
           </div>

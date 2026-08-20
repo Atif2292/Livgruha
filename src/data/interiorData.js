@@ -16,8 +16,8 @@ export const BRAND_INFO = {
   supportEmail: "support@livgruhainteriors.com",
   projectsEmail: "projects@livgruhainteriors.com",
   careersEmail: "careers@livgruhainteriors.com",
-  address: "Plot No. 42, Silicon Valley Layout, Near WaveRock, Hitec City / Madhapur, Hyderabad, Telangana - 500081",
-  experienceCenters: 3,
+  address: "Hyderabad, Telangana, India",
+  experienceCenters: 1,
   happyHomes: "3,200+",
   expertDesigners: "85+",
   avgRating: "4.94",
@@ -468,30 +468,16 @@ export const CITIES_DATA = [
     name: "Hyderabad",
     state: "Telangana",
     tag: "Headquarters & Flagship Experience Center",
-    experienceCentersCount: 3,
+    experienceCentersCount: 1,
     homesCompleted: "3,200+",
     image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=80",
     centers: [
       {
-        name: "Financial District Flagship Experience Center",
-        address: "Plot No. 42, Silicon Valley Layout, Near WaveRock, Hitec City / Madhapur, Hyderabad - 500081",
+        name: "Hyderabad Design & Consultation Hub",
+        address: "Hyderabad, Telangana, India",
         phone: "+91 79956 72323",
         timings: "10:00 AM - 8:30 PM (All 7 Days)",
-        amenities: ["Full-Scale 3BHK Walkthrough", "Blum & Häfele Experience Bay", "Live Modular Kitchen Studio", "500+ Material Swatch Lounge"]
-      },
-      {
-        name: "Jubilee Hills Design Gallery",
-        address: "Road No. 36, Near Peddamma Temple, Jubilee Hills, Hyderabad - 500033",
-        phone: "+91 79956 72323",
-        timings: "10:30 AM - 8:30 PM (All 7 Days)",
-        amenities: ["Bespoke Veneer & Italian Marble Studio", "Acoustic Fluting & Smart Lighting Lounge", "VR 3D Walkthrough"]
-      },
-      {
-        name: "Gachibowli Tech & Design Studio",
-        address: "Main Road, Gachibowli Circle, Near Bio-Diversity Park, Hyderabad - 500032",
-        phone: "+91 79956 72323",
-        timings: "10:30 AM - 8:00 PM (All 7 Days)",
-        amenities: ["Modular Joinery Lab", "Floor-to-Ceiling Wardrobe Display", "Hardware Stress Test Bay"]
+        amenities: ["On-Site & Studio Consultations", "Material & Hardware Catalogues", "Photorealistic 3D Design Walkthroughs"]
       }
     ],
     topSocieties: [

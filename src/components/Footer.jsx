@@ -88,7 +88,7 @@ export default function Footer({ setActivePage, open3DModal, openEstimatorModal,
             <div className="pt-2 flex flex-col space-y-2.5 text-xs text-gray-300">
               <div className="flex items-start gap-2 text-gray-300">
                 <MapPin className="w-4 h-4 text-[#C68B59] shrink-0 mt-0.5" />
-                <span>Plot No. 42, Silicon Valley Layout, Near WaveRock, Hitec City / Madhapur, Hyderabad, Telangana - 500081</span>
+                <span>Hyderabad, Telangana, India</span>
               </div>
 
               <a 
@@ -113,40 +113,15 @@ export default function Footer({ setActivePage, open3DModal, openEstimatorModal,
               Quick Links
             </h5>
             <ul className="space-y-2.5 text-xs text-gray-300">
-              <li>
-                <button onClick={() => handleNav('home')} className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer">
-                  <ChevronRight className="w-3 h-3 text-[#C68B59]" /> Home Overview
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNav('about')} className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer">
-                  <ChevronRight className="w-3 h-3 text-[#C68B59]" /> About LivGruha
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNav('how-it-works')} className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer">
-                  <ChevronRight className="w-3 h-3 text-[#C68B59]" /> How It Works
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNav('portfolio')} className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer">
-                  <ChevronRight className="w-3 h-3 text-[#C68B59]" /> Completed Projects
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNav('cities')} className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer">
-                  <ChevronRight className="w-3 h-3 text-[#C68B59]" /> Branches & Studios
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNav('contact')} className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer">
-                  <ChevronRight className="w-3 h-3 text-[#C68B59]" /> Contact Us
-                </button>
-              </li>
+              <li><button onClick={() => handleNav('home')} className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer"><ChevronRight className="w-3 h-3 text-[#C68B59]" /> Home Overview</button></li>
+              <li><button onClick={() => handleNav('about')} className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer"><ChevronRight className="w-3 h-3 text-[#C68B59]" /> About LivGruha</button></li>
+              <li><button onClick={() => handleNav('how-it-works')} className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer"><ChevronRight className="w-3 h-3 text-[#C68B59]" /> How It Works</button></li>
+              <li><button onClick={() => handleNav('portfolio')} className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer"><ChevronRight className="w-3 h-3 text-[#C68B59]" /> Completed Projects</button></li>
+              <li><button onClick={() => handleNav('contact')} className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer"><ChevronRight className="w-3 h-3 text-[#C68B59]" /> Contact Us</button></li>
             </ul>
           </div>
 
-          {/* Col 3: Interior Solutions */}
+          {/* Col 3: Interior Services */}
           <div>
             <h5 className="text-xs font-bold uppercase tracking-wider text-[#C68B59] mb-4">
               Design Solutions
@@ -161,22 +136,22 @@ export default function Footer({ setActivePage, open3DModal, openEstimatorModal,
             </ul>
           </div>
 
-          {/* Col 4: Branches & Studios */}
+          {/* Col 4: Service Areas */}
           <div>
             <h5 className="text-xs font-bold uppercase tracking-wider text-[#C68B59] mb-4">
-              Branches & Studios
+              Service Locations
             </h5>
             <ul className="space-y-2.5 text-xs text-gray-300">
               <li>
                 <button 
-                  onClick={() => handleNav('cities')} 
+                  onClick={() => handleNav('contact')} 
                   className="hover:text-white transition-colors flex items-center justify-between w-full cursor-pointer text-left"
                 >
                   <div>
-                    <span className="font-semibold text-white block">Hyderabad Flagship</span>
-                    <span className="text-[10px] text-gray-400">Gachibowli & Jubilee Hills</span>
+                    <span className="font-semibold text-white block">Hyderabad, Telangana</span>
+                    <span className="text-[10px] text-gray-400">Complete Home Interiors</span>
                   </div>
-                  <span className="text-[10px] px-2 py-0.5 rounded bg-[#FAF2ED]/10 text-[#C68B59] border border-[#C68B59]/30">Open</span>
+                  <span className="text-[10px] px-2 py-0.5 rounded bg-[#FAF2ED]/10 text-[#C68B59] border border-[#C68B59]/30">Active</span>
                 </button>
               </li>
               <li>
