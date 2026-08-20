@@ -28,9 +28,9 @@ const TRANSFORMATION_PROJECTS = [
     project: 'Prestige High Fields, Hyderabad - 4 BHK',
     beforeImage: '/transformations/bedroom-before.jpg',
     afterImage: '/transformations/bedroom-after.jpg',
-    beforeLabel: 'Empty Bedroom Shell (Day 0)',
-    afterLabel: 'Acoustic Master Suite (Day 21)',
-    highlights: 'Floor-to-Ceiling Tinted Glass Closets • Upholstered Acoustic Headboard • Integrated Vanity'
+    beforeLabel: 'Bare Master Bedroom Shell (Day 0)',
+    afterLabel: 'Upholstered Master Suite (Day 21)',
+    highlights: 'Velvet Vertical Headboard • Oak Fluted Paneling • 3000K Perimeter Cove • Scandinavian Parquet'
   },
   {
     id: 'foyer',
