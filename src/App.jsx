@@ -31,21 +31,22 @@ export default function App() {
   const [isAdminModalOpen, setIsAdminModalOpen] = useState(false);
   const [activeLegalModal, setActiveLegalModal] = useState(null); // 'privacy' | 'terms' | 'warranty' | null
 
-  // Initialize lead attribution & trigger welcome popup on initial visit after a brief 1.8 second delay
+  // Initialize lead attribution & trigger welcome popup on initial visit (only if never submitted or dismissed)
   useEffect(() => {
     // Detect & store first-touch acquisition source (Point 18)
     const attribution = detectAcquisitionSource();
     trackEvent('page_view', { page: 'home', source: attribution.source });
 
-    const timer = setTimeout(() => {
-      // Check if previously dismissed in this session
-      const dismissed = sessionStorage.getItem('livgruha_welcome_dismissed');
-      if (!dismissed) {
-        setIsWelcomeModalOpen(true);
-      }
-    }, 1800);
+    const isSubmitted = localStorage.getItem('livgruha_lead_submitted') === 'true';
+    const isDismissed = localStorage.getItem('livgruha_welcome_dismissed') === 'true';
 
-    return () => clearTimeout(timer);
+    if (!isSubmitted && !isDismissed) {
+      const timer = setTimeout(() => {
+        setIsWelcomeModalOpen(true);
+      }, 1000);
+
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   // Secret URL routing & Hotkey listener for Admin Portal

@@ -5,6 +5,7 @@ import {
 } from 'lucide-react';
 import { useData } from '../context/DataContext';
 import { trackEvent } from '../services/analytics';
+import BrandLogo from './BrandLogo';
 
 export default function Footer({ setActivePage, open3DModal, openEstimatorModal, openConfigModal, openAdminPortal, openLegalModal }) {
   const { brand, banners, cities } = useData();
@@ -73,29 +74,35 @@ export default function Footer({ setActivePage, open3DModal, openEstimatorModal,
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 py-12 border-b border-gray-800">
           {/* Col 1: Brand Ethos & Logo */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="inline-block bg-white p-2.5 rounded-2xl shadow-sm">
-              <img 
-                src="/logo.png" 
-                alt="Livgruha Interiors" 
-                className="h-10 w-auto object-contain"
-              />
-            </div>
+            <button 
+              onClick={() => handleNav('home')} 
+              className="text-left focus:outline-none cursor-pointer group"
+            >
+              <BrandLogo variant="dark" />
+            </button>
+            
             <p className="text-xs sm:text-sm text-gray-400 max-w-sm leading-relaxed">
-              <strong>LivGruha Interiors</strong> transforms residential spaces across {banners.servingStates || "Telangana, Andhra Pradesh, and Karnataka"}. Engineered with German precision hardware, 10-year warranty, and guaranteed 21-day handover.
+              <strong>LivGruha Interiors</strong> delivers bespoke turnkey home interiors with certified German Blum mechanisms, 100% IS-710 Marine BWR Plywood, and guaranteed 21-day handover.
             </p>
 
-            <div className="pt-2 flex flex-col space-y-2 text-xs text-gray-300">
+            <div className="pt-2 flex flex-col space-y-2.5 text-xs text-gray-300">
+              <div className="flex items-start gap-2 text-gray-300">
+                <MapPin className="w-4 h-4 text-[#C68B59] shrink-0 mt-0.5" />
+                <span>Plot No. 42, Silicon Valley Layout, Near WaveRock, Hitec City / Madhapur, Hyderabad, Telangana - 500081</span>
+              </div>
+
               <a 
-                href={`tel:${(brand.phone || '').replace(/[^0-9]/g, '')}`} 
+                href={`tel:${(brand.phone || '+917995672323').replace(/[^0-9]/g, '')}`} 
                 onClick={handleCallClick}
                 className="flex items-center gap-2 hover:text-[#C68B59] transition-colors"
               >
                 <Phone className="w-3.5 h-3.5 text-[#C68B59]" />
-                <span>{brand.phone} (10 AM - 8 PM)</span>
+                <span className="font-semibold">{brand.phone || '+91 79956 72323'} (10:00 AM - 8:30 PM)</span>
               </a>
-              <a href={`mailto:${brand.email}`} className="flex items-center gap-2 hover:text-[#C68B59] transition-colors">
+
+              <a href={`mailto:${brand.email || 'info@livgruhainteriors.com'}`} className="flex items-center gap-2 hover:text-[#C68B59] transition-colors">
                 <Mail className="w-3.5 h-3.5 text-[#C68B59]" />
-                <span>{brand.email}</span>
+                <span>{brand.email || 'info@livgruhainteriors.com'}</span>
               </a>
             </div>
           </div>
@@ -127,8 +134,13 @@ export default function Footer({ setActivePage, open3DModal, openEstimatorModal,
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNav('careers')} className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer">
-                  <ChevronRight className="w-3 h-3 text-[#C68B59]" /> Careers @ LivGruha
+                <button onClick={() => handleNav('cities')} className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer">
+                  <ChevronRight className="w-3 h-3 text-[#C68B59]" /> Branches & Studios
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('contact')} className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer">
+                  <ChevronRight className="w-3 h-3 text-[#C68B59]" /> Contact Us
                 </button>
               </li>
             </ul>
@@ -146,27 +158,35 @@ export default function Footer({ setActivePage, open3DModal, openEstimatorModal,
               <li><span className="hover:text-white cursor-pointer" onClick={() => handleNav('interior')}>Living TV & Acoustic Louvers</span></li>
               <li><span className="hover:text-white cursor-pointer" onClick={() => handleNav('interior')}>Sacred Teak Pooja Mandirs</span></li>
               <li><span className="hover:text-white cursor-pointer" onClick={() => handleNav('interior')}>False Ceiling & Profile LEDs</span></li>
-              <li><span className="hover:text-white cursor-pointer" onClick={() => handleNav('interior')}>Commercial & Office Works</span></li>
             </ul>
           </div>
 
-          {/* Col 4: Experience Studios & Administration */}
+          {/* Col 4: Branches & Studios */}
           <div>
             <h5 className="text-xs font-bold uppercase tracking-wider text-[#C68B59] mb-4">
-              Operating Hubs & Admin
+              Branches & Studios
             </h5>
-            <ul className="space-y-2 text-xs text-gray-300">
-              {cities.map(c => (
-                <li key={c.id}>
-                  <button 
-                    onClick={() => handleNav('cities')} 
-                    className="hover:text-white transition-colors flex items-center justify-between w-full cursor-pointer"
-                  >
-                    <span>{c.name}</span>
-                    <span className="text-[10px] text-gray-500">{c.experienceCentersCount} Studios</span>
-                  </button>
-                </li>
-              ))}
+            <ul className="space-y-2.5 text-xs text-gray-300">
+              <li>
+                <button 
+                  onClick={() => handleNav('cities')} 
+                  className="hover:text-white transition-colors flex items-center justify-between w-full cursor-pointer text-left"
+                >
+                  <div>
+                    <span className="font-semibold text-white block">Hyderabad Flagship</span>
+                    <span className="text-[10px] text-gray-400">Gachibowli & Jubilee Hills</span>
+                  </div>
+                  <span className="text-[10px] px-2 py-0.5 rounded bg-[#FAF2ED]/10 text-[#C68B59] border border-[#C68B59]/30">Open</span>
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleNav('contact')} 
+                  className="text-amber-200 hover:text-white text-xs font-semibold flex items-center gap-1 mt-2 cursor-pointer"
+                >
+                  <span>Book Studio Walkthrough ➔</span>
+                </button>
+              </li>
             </ul>
           </div>
         </div>

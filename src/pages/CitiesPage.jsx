@@ -16,38 +16,16 @@ export default function CitiesPage({ open3DModal, openEstimatorModal }) {
       
       {/* 1. HEADER */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
-        <span className="px-3.5 py-1 rounded-full bg-[#FAF2ED] text-[#9B3F23] text-xs font-bold uppercase tracking-wider border border-[#E8CFCA]">
-          14 Experience Studios Across India
-        </span>
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FAF2ED] text-[#9B3F23] text-xs font-bold uppercase tracking-wider border border-[#E8CFCA] shadow-xs">
+          <Building className="w-3.5 h-3.5" />
+          <span>Branches & Design Studios</span>
+        </div>
         <h1 className="text-3xl sm:text-5xl font-serif font-bold text-[#1E2229] mt-3">
-          Visit Your City's Livgruha Studio
+          Visit Our Hyderabad Flagship Studios
         </h1>
         <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto mt-2.5">
-          Touch full-scale modular kitchens, test German Blum mechanisms in person, and explore 500+ finishes with your dedicated Senior Architect.
+          Walk through full-scale modular kitchens, test German Blum mechanisms in person, and explore 500+ finishes with your dedicated Senior Architect.
         </p>
-
-        {/* City Switcher Buttons */}
-        <div className="flex flex-wrap items-center justify-center gap-2.5 mt-8">
-          {(cities || []).map((city) => (
-            <button
-              key={city.id}
-              onClick={() => setSelectedCityId(city.id)}
-              className={`px-6 py-3 rounded-full text-xs font-bold transition-all cursor-pointer flex items-center gap-2 ${
-                selectedCity.id === city.id
-                  ? 'bg-[#9B3F23] text-white shadow-lg scale-105'
-                  : 'bg-white text-gray-700 hover:bg-[#FAF2ED] hover:text-[#9B3F23] border border-[#E6DFD5]'
-              }`}
-            >
-              <MapPin className="w-3.5 h-3.5" />
-              <span>{city.name}</span>
-              <span className={`text-[10px] px-2 py-0.5 rounded-full ${
-                selectedCity.id === city.id ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-600'
-              }`}>
-                {city.homesCompleted}
-              </span>
-            </button>
-          ))}
-        </div>
       </div>
 
       {/* 2. SELECTED CITY SHOWROOM DIRECTORY */}

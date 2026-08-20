@@ -436,8 +436,8 @@ export default function AdminPortalModal({ isOpen, onClose }) {
                   <span className="font-semibold text-gray-800">livgruhainteriors.com</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Operating:</span>
-                  <span className="font-semibold text-emerald-700">TS • AP • KA</span>
+                  <span>Location:</span>
+                  <span className="font-semibold text-emerald-700">Hyderabad, Telangana</span>
                 </div>
               </div>
             </div>

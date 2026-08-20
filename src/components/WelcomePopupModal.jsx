@@ -21,16 +21,25 @@ export default function WelcomePopupModal({ isOpen, onClose, onOpen3DModal }) {
   const [resultData, setResultData] = useState(null);
   const [errorMsg, setErrorMsg] = useState('');
 
+  const handleClose = () => {
+    try {
+      localStorage.setItem('livgruha_welcome_dismissed', 'true');
+    } catch (e) {
+      // ignore
+    }
+    onClose();
+  };
+
   // Handle ESC key press
   React.useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === 'Escape') handleClose();
     };
     if (isOpen) {
       window.addEventListener('keydown', handleKeyDown);
     }
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, onClose]);
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -64,13 +73,27 @@ export default function WelcomePopupModal({ isOpen, onClose, onOpen3DModal }) {
       setResultData(res);
       setSubmitted(true);
 
+      // Permanently record submission in localStorage so popup never shows again
+      try {
+        localStorage.setItem('livgruha_lead_submitted', 'true');
+        localStorage.setItem('livgruha_welcome_dismissed', 'true');
+      } catch (e) {
+        // ignore
+      }
+
       // Trigger celebratory confetti
       confetti({
-        particleCount: 80,
-        spread: 70,
+        particleCount: 90,
+        spread: 75,
         origin: { y: 0.6 },
         colors: ['#9B3F23', '#C68B59', '#D4A373', '#E9D8A6']
       });
+
+      // Auto-dismiss after 2.5 seconds so user sees confirmation and popup disappears cleanly
+      setTimeout(() => {
+        onClose();
+      }, 2500);
+
     } catch (err) {
       console.error('Submission failed', err);
       setErrorMsg('Failed to save. Please try again or reach out on WhatsApp.');
@@ -82,7 +105,7 @@ export default function WelcomePopupModal({ isOpen, onClose, onOpen3DModal }) {
   return (
     <div 
       className="fixed inset-0 z-[999] flex items-center justify-center p-3 sm:p-4 bg-black/75 backdrop-blur-sm modal-backdrop overflow-y-auto"
-      onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
+      onClick={(e) => { if (e.target === e.currentTarget) handleClose(); }}
     >
       <div 
         className="relative w-full max-w-lg rounded-3xl shadow-2xl border border-[#E6DFD5] overflow-hidden modal-content"
@@ -90,7 +113,7 @@ export default function WelcomePopupModal({ isOpen, onClose, onOpen3DModal }) {
       >
         {/* Close Button */}
         <button
-          onClick={onClose}
+          onClick={handleClose}
           className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/20 hover:bg-white/30 text-white transition-colors cursor-pointer"
           aria-label="Close modal"
         >

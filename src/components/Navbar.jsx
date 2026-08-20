@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, Sparkles, Menu, X, ChevronRight, Calculator, MapPin, Layers, ShieldCheck } from 'lucide-react';
+import { Phone, Sparkles, Menu, X, ChevronRight, Calculator, MapPin, Layers, ShieldCheck, Clock, Award, Star } from 'lucide-react';
 import { useData } from '../context/DataContext';
 import { trackEvent } from '../services/analytics';
+import BrandLogo from './BrandLogo';
 
 export default function Navbar({ activePage, setActivePage, open3DModal, openEstimatorModal, openConfigModal, openAdminPortal }) {
   const { brand, banners } = useData();
@@ -22,7 +23,7 @@ export default function Navbar({ activePage, setActivePage, open3DModal, openEst
     { id: 'interior', label: 'Services' },
     { id: 'portfolio', label: 'Projects' },
     { id: 'how-it-works', label: 'How It Works' },
-    { id: 'cities', label: 'Locations' },
+    { id: 'cities', label: 'Branches' },
     { id: 'contact', label: 'Contact' },
   ];
 
@@ -75,15 +76,10 @@ export default function Navbar({ activePage, setActivePage, open3DModal, openEst
             <div className="flex items-center">
               <button 
                 onClick={() => handleNavClick('home')}
-                className="group flex items-center gap-3 text-left focus:outline-none cursor-pointer"
+                className="group flex items-center focus:outline-none cursor-pointer"
+                title="LivGruha Interiors Homepage"
               >
-                <div className="bg-white px-2 py-1 rounded-xl shadow-xs border border-[#E6DFD5]/50 flex items-center">
-                  <img 
-                    src="/logo.png" 
-                    alt="Livgruha Interiors Logo" 
-                    className="h-9 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
+                <BrandLogo />
               </button>
             </div>
 

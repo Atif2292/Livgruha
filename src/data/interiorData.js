@@ -16,12 +16,13 @@ export const BRAND_INFO = {
   supportEmail: "support@livgruhainteriors.com",
   projectsEmail: "projects@livgruhainteriors.com",
   careersEmail: "careers@livgruhainteriors.com",
-  experienceCenters: 14,
+  address: "Plot No. 42, Silicon Valley Layout, Near WaveRock, Hitec City / Madhapur, Hyderabad, Telangana - 500081",
+  experienceCenters: 3,
   happyHomes: "3,200+",
   expertDesigners: "85+",
   avgRating: "4.94",
   warrantyYears: "10 Years",
-  servingStates: "Telangana | Andhra Pradesh | Karnataka",
+  servingStates: "Hyderabad & Telangana",
   handoverCommitment: "Handover in Just 21 Days",
   deliveryGuarantees: {
     express: "21 Working Days",
@@ -459,112 +460,50 @@ export const PARTNER_BRANDS = [
 ];
 
 /**
- * Operating Hubs (Telangana, Andhra Pradesh, Karnataka - Points 1 & 9)
+ * Active Branches & Experience Studios (Hyderabad Flagship)
  */
 export const CITIES_DATA = [
   {
     id: "hyderabad",
     name: "Hyderabad",
     state: "Telangana",
-    tag: "Hi-Tech City & Banjara Hills Hub",
+    tag: "Headquarters & Flagship Experience Center",
     experienceCentersCount: 3,
-    homesCompleted: "1,400+",
+    homesCompleted: "3,200+",
     image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=80",
     centers: [
       {
-        name: "Gachibowli Experience Center",
-        address: "Financial District Main Rd, Near Wave Rock, Gachibowli, Hyderabad - 500032",
-        phone: "+91 40 4821 9001",
-        timings: "10:30 AM - 8:30 PM (All 7 Days)",
-        amenities: ["Luxe Italian PU Experience", "4BHK Duplex Walkthrough", "Modular Kitchen Studio"]
+        name: "Financial District Flagship Experience Center",
+        address: "Plot No. 42, Silicon Valley Layout, Near WaveRock, Hitec City / Madhapur, Hyderabad - 500081",
+        phone: "+91 79956 72323",
+        timings: "10:00 AM - 8:30 PM (All 7 Days)",
+        amenities: ["Full-Scale 3BHK Walkthrough", "Blum & Häfele Experience Bay", "Live Modular Kitchen Studio", "500+ Material Swatch Lounge"]
       },
       {
         name: "Jubilee Hills Design Gallery",
-        address: "Road No. 36, Jubilee Hills, Hyderabad - 500033",
-        phone: "+91 40 4821 9002",
-        timings: "10:30 AM - 8:30 PM",
-        amenities: ["Bespoke Veneer & Marble Studio", "Smart Lighting Lounge"]
-      },
-      {
-        name: "Warangal Associate Studio",
-        address: "Hanamkonda Main Road, Warangal, Telangana - 506001",
-        phone: "+91 40 4821 9003",
-        timings: "10:30 AM - 8:00 PM",
-        amenities: ["Modular Kitchen Lab", "Material Swatch Gallery"]
-      }
-    ],
-    topSocieties: ["My Home Bhooja", "Aparna Serene Park", "Aparna Sarovar", "Prestige High Fields", "Jayabheri The Peak", "Rajapushpa Atria"]
-  },
-  {
-    id: "visakhapatnam",
-    name: "Visakhapatnam",
-    state: "Andhra Pradesh",
-    tag: "Coastal City Flagship",
-    experienceCentersCount: 2,
-    homesCompleted: "620+",
-    image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=80",
-    centers: [
-      {
-        name: "MVP Colony Experience Center",
-        address: "Sector 3, Near AS Raja Grounds, MVP Colony, Visakhapatnam - 530017",
-        phone: "+91 891 278 4501",
-        timings: "10:30 AM - 8:30 PM",
-        amenities: ["Marine Grade BWR Demo", "Coastal Humidity Resistant Showcase", "Live Kitchens"]
-      }
-    ],
-    topSocieties: ["MK Gold Crest", "Sanskriti Sea View", "Radha Krishna Towers", "Pawan Heights"]
-  },
-  {
-    id: "vijayawada",
-    name: "Vijayawada & Guntur",
-    state: "Andhra Pradesh",
-    tag: "Capital Region Hub",
-    experienceCentersCount: 2,
-    homesCompleted: "480+",
-    image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1000&q=80",
-    centers: [
-      {
-        name: "Benz Circle Experience Studio",
-        address: "MG Road, Near Benz Circle, Vijayawada - 520010",
-        phone: "+91 866 249 1102",
-        timings: "10:30 AM - 8:30 PM",
-        amenities: ["Full 3BHK Villa Display", "Solid Teak Woodcraft Studio"]
-      }
-    ],
-    topSocieties: ["Lanco Hills Amaravati", "LEPL Icon", "Rain Tree Park Guntur", "Varun Amaravati"]
-  },
-  {
-    id: "bangalore",
-    name: "Bangalore",
-    state: "Karnataka",
-    tag: "Headquarters & Central Tech Studio",
-    experienceCentersCount: 4,
-    homesCompleted: "1,850+",
-    image: "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=1000&q=80",
-    centers: [
-      {
-        name: "Indiranagar Flagship Experience Studio",
-        address: "100 Feet Road, HAL 2nd Stage, Indiranagar, Bangalore - 560038",
-        phone: "+91 80 4709 2891",
+        address: "Road No. 36, Near Peddamma Temple, Jubilee Hills, Hyderabad - 500033",
+        phone: "+91 79956 72323",
         timings: "10:30 AM - 8:30 PM (All 7 Days)",
-        amenities: ["Full-scale 3BHK Mockup", "500+ Material Swatch Wall", "VR 3D Walkthrough Studio"]
+        amenities: ["Bespoke Veneer & Italian Marble Studio", "Acoustic Fluting & Smart Lighting Lounge", "VR 3D Walkthrough"]
       },
       {
-        name: "HSR Layout Design Center",
-        address: "27th Main Road, Sector 1, HSR Layout, Bangalore - 560102",
-        phone: "+91 80 4709 2892",
-        timings: "10:30 AM - 8:30 PM (All 7 Days)",
-        amenities: ["Live Modular Kitchen Labs", "Hardware Stress Test Bay"]
-      },
-      {
-        name: "Whitefield Experience Center",
-        address: "ITPL Main Road, Prestige Shantiniketan Zone, Whitefield, Bangalore - 560066",
-        phone: "+91 80 4709 2893",
-        timings: "10:30 AM - 8:30 PM",
-        amenities: ["Lighting Simulation Room", "Smart Home Automation Bay"]
+        name: "Gachibowli Tech & Design Studio",
+        address: "Main Road, Gachibowli Circle, Near Bio-Diversity Park, Hyderabad - 500032",
+        phone: "+91 79956 72323",
+        timings: "10:30 AM - 8:00 PM (All 7 Days)",
+        amenities: ["Modular Joinery Lab", "Floor-to-Ceiling Wardrobe Display", "Hardware Stress Test Bay"]
       }
     ],
-    topSocieties: ["Prestige Jindal City", "Sobha Dream Acres", "Godrej Eternity", "Brigade Cornerstone Utopia", "Assetz Marq", "Puravankara Atmosphere"]
+    topSocieties: [
+      "My Home Bhooja", 
+      "Aparna Serene Park", 
+      "Aparna Sarovar Zenith", 
+      "Prestige High Fields", 
+      "Jayabheri The Peak", 
+      "Rajapushpa Atria", 
+      "Lanco Hills", 
+      "Honer Vivantis"
+    ]
   }
 ];
 

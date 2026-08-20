@@ -76,7 +76,7 @@ export default function ContactPage({ open3DModal, openEstimatorModal }) {
           Let's Design Your Dream Home
         </h1>
         <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto mt-2.5">
-          Visit an Experience Studio, request a designer home visit, or book a virtual 3D consultation across Telangana, Andhra Pradesh, and Karnataka.
+          Visit our Hyderabad Experience Studio, request a designer home visit, or book a virtual 3D consultation.
         </p>
       </div>
 
@@ -91,20 +91,20 @@ export default function ContactPage({ open3DModal, openEstimatorModal }) {
               <div>
                 <h3 className="text-2xl font-serif font-bold text-white">Direct Hotline</h3>
                 <p className="text-xs text-amber-100/90 mt-1">
-                  Speak directly with our senior architectural lead for quick quotes and queries.
+                  Speak directly with our senior architectural lead for quick quotes and design queries.
                 </p>
               </div>
 
               <div className="space-y-4 text-sm">
                 <a
-                  href={`tel:${(brand.phone || '').replace(/[^0-9]/g, '')}`}
+                  href={`tel:${(brand.phone || '+917995672323').replace(/[^0-9]/g, '')}`}
                   onClick={handleCallClick}
                   className="flex items-center gap-3.5 p-3 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md transition-colors"
                 >
                   <Phone className="w-5 h-5 text-amber-200" />
                   <div>
                     <span className="text-[11px] text-white/70 block">Telephone Hotline:</span>
-                    <span className="font-bold">{brand.phone}</span>
+                    <span className="font-bold">{brand.phone || '+91 79956 72323'}</span>
                   </div>
                 </a>
 
@@ -118,7 +118,7 @@ export default function ContactPage({ open3DModal, openEstimatorModal }) {
                   <MessageSquare className="w-5 h-5 text-emerald-300" />
                   <div>
                     <span className="text-[11px] text-white/70 block">Instant WhatsApp Chat:</span>
-                    <span className="font-bold">Chat with Senior Designer</span>
+                    <span className="font-bold">+91 79956 72323</span>
                   </div>
                 </a>
 
@@ -135,7 +135,7 @@ export default function ContactPage({ open3DModal, openEstimatorModal }) {
               </div>
 
               <div className="pt-2 border-t border-white/20 flex items-center justify-between text-xs text-amber-100">
-                <span>Showrooms Open: 10:30 AM – 8:30 PM</span>
+                <span>Showrooms Open: 10:00 AM – 8:30 PM</span>
                 <span>All 7 Days</span>
               </div>
             </div>
@@ -144,17 +144,17 @@ export default function ContactPage({ open3DModal, openEstimatorModal }) {
             <div className="bg-white rounded-3xl border border-[#E6DFD5] p-6 shadow-sm space-y-3">
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#9B3F23]">
                 <MapPin className="w-4 h-4" />
-                <span>Headquarters & Central Studio</span>
+                <span>Hyderabad Head Office & Flagship Studio</span>
               </div>
               <h4 className="text-base font-serif font-bold text-gray-900">
-                Indiranagar Flagship Design Pavilion
+                Financial District Design Pavilion
               </h4>
               <p className="text-xs text-gray-600 leading-relaxed">
-                100 Feet Road, HAL 2nd Stage, Indiranagar, Bangalore, Karnataka - 560038
+                Plot No. 42, Silicon Valley Layout, Near WaveRock, Hitec City / Madhapur, Hyderabad, Telangana - 500081
               </p>
               <div className="pt-2 text-[11px] text-gray-500 flex items-center gap-2">
                 <Clock className="w-3.5 h-3.5" />
-                <span>Free Valet Parking Available • 3BHK Full Scale Mockup</span>
+                <span>Free Valet Parking Available • 3BHK Full Scale Walkthrough Mockup</span>
               </div>
             </div>
           </div>

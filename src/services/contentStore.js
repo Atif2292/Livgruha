@@ -23,8 +23,8 @@ const DEFAULT_FAQS = [
     a: "Our senior architectural designers create a photorealistic 3D virtual model of your specific floor plan during your first consultation. You see exactly how your modular kitchen, wardrobes, false ceiling, and lighting look before committing."
   },
   {
-    q: "Which states and regions do you currently serve?",
-    a: "We actively serve homeowners across Telangana (Hyderabad, Warangal), Andhra Pradesh (Visakhapatnam, Vijayawada, Guntur), and Karnataka (Bangalore, Mysore)."
+    q: "Which areas do you currently serve?",
+    a: "We actively serve homeowners across Hyderabad & Telangana including Financial District, Hitec City, Jubilee Hills, Banjara Hills, Madhapur, Gachibowli, Kondapur, Kokapet, Narsingi, and surrounding residential communities."
   },
   {
     q: "What warranty do I receive on modular woodwork & hardware?",
@@ -32,7 +32,7 @@ const DEFAULT_FAQS = [
   },
   {
     q: "Can I visit your Experience Studios before booking?",
-    a: "Yes! We have flagship Experience Studios across Telangana, Andhra Pradesh, and Karnataka featuring full-scale 2BHK/3BHK mockups, live kitchens, and 500+ material finish swatches."
+    a: "Yes! We have flagship Experience Studios across Hyderabad (Financial District, Jubilee Hills, and Gachibowli) featuring full-scale 3BHK mockups, live kitchens, and 500+ material finish swatches."
   }
 ];
 
