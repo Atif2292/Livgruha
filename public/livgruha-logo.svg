@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 340" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&amp;family=Montserrat:wght@500;600;700&amp;display=swap');
+      .logo-terra { fill: #983D24; }
+      .logo-stroke-terra { stroke: #983D24; fill: none; }
+      .logo-gold { fill: #B86B35; }
+      .logo-stroke-gold { stroke: #B86B35; fill: none; }
+      .brand-title {
+        font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+        font-weight: 800;
+        font-size: 56px;
+        letter-spacing: 6px;
+        fill: #983D24;
+      }
+      .brand-sub {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        letter-spacing: 12px;
+        fill: #983D24;
+      }
+      .brand-tagline {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 13.5px;
+        letter-spacing: 3.5px;
+        fill: #4A4039;
+      }
+    </style>
+  </defs>
+
+  <!-- 1. HOUSE GABLE ROOF OUTLINE -->
+  <!-- Left eave to apex to right eave -->
+  <path d="M 175 62 L 250 8 L 325 62" class="logo-stroke-terra" stroke-width="8.5" stroke-linecap="square" stroke-linejoin="miter" />
+  <!-- Left vertical wall -->
+  <path d="M 189 62 L 189 125" class="logo-stroke-terra" stroke-width="8.5" stroke-linecap="square" />
+  <!-- Right vertical wall -->
+  <path d="M 311 62 L 311 125" class="logo-stroke-terra" stroke-width="8.5" stroke-linecap="square" />
+
+  <!-- 2. INTERLOCKING 'LG' EMBLEM -->
+  <!-- 'L' letter -->
+  <path d="M 194 36 L 208 36 L 208 112 L 246 112 L 246 125 L 181 125 L 181 112 L 194 112 Z" class="logo-terra" />
+  
+  <!-- 'G' letter -->
+  <path d="M 292 48 C 283 38 271 33 257 33 C 232 33 214 51 214 78 C 214 105 233 125 260 125 C 285 125 303 108 303 84 L 254 84 L 254 72 L 317 72 L 317 84 C 317 114 292 137 259 137 C 224 137 200 110 200 78 C 200 44 225 21 258 21 C 276 21 292 28 303 40 Z" class="logo-terra" />
+
+  <!-- 3. BRAND NAME: LIVGRUHA -->
+  <text x="250" y="195" text-anchor="middle" class="brand-title">LIVGRUHA</text>
+
+  <!-- 4. SUBTITLE WITH SIDE LINES: — INTERIORS — -->
+  <line x1="42" y1="223" x2="118" y2="223" class="logo-stroke-terra" stroke-width="3" stroke-linecap="square" />
+  <text x="256" y="232" text-anchor="middle" class="brand-sub">INTERIORS</text>
+  <line x1="382" y1="223" x2="458" y2="223" class="logo-stroke-terra" stroke-width="3" stroke-linecap="square" />
+
+  <!-- 5. TAGLINE: ● DESIGNING SPACES. ENRICHING LIVES. ● -->
+  <circle cx="95" cy="265" r="3.5" class="logo-gold" />
+  <text x="250" y="269" text-anchor="middle" class="brand-tagline">DESIGNING SPACES. ENRICHING LIVES.</text>
+  <circle cx="405" cy="265" r="3.5" class="logo-gold" />
+
+  <!-- 6. BOTTOM FLOURISH: ——— ❖ ——— -->
+  <!-- Left tapered line -->
+  <path d="M 160 295 L 225 295" class="logo-stroke-gold" stroke-width="2.5" stroke-linecap="round" />
+  <!-- Center 4-diamond star flourish -->
+  <g transform="translate(250, 295)">
+    <!-- Top diamond -->
+    <polygon points="0,-12 4,-6 0,0 -4,-6" class="logo-gold" />
+    <!-- Bottom diamond -->
+    <polygon points="0,12 4,6 0,0 -4,6" class="logo-gold" />
+    <!-- Left diamond -->
+    <polygon points="-12,0 -6,-4 0,0 -6,4" class="logo-gold" />
+    <!-- Right diamond -->
+    <polygon points="12,0 6,-4 0,0 6,4" class="logo-gold" />
+  </g>
+  <!-- Right tapered line -->
+  <path d="M 275 295 L 340 295" class="logo-stroke-gold" stroke-width="2.5" stroke-linecap="round" />
+</svg>
