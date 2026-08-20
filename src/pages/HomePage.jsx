@@ -98,16 +98,10 @@ export default function HomePage({ open3DModal, openEstimatorModal, setActivePag
             <div className="lg:col-span-7 space-y-6 text-left">
               {/* Trust Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FAF2ED] border border-[#E8CFCA] text-xs font-bold text-[#9B3F23]">
-                <span className="flex items-center text-amber-500">
-                  <Star className="w-3.5 h-3.5 fill-amber-500" />
-                  <Star className="w-3.5 h-3.5 fill-amber-500" />
-                  <Star className="w-3.5 h-3.5 fill-amber-500" />
-                  <Star className="w-3.5 h-3.5 fill-amber-500" />
-                  <Star className="w-3.5 h-3.5 fill-amber-500" />
-                </span>
-                <span className="text-[#1E2229]">{brand.avgRating || '4.94'} / 5</span>
+                <ShieldCheck className="w-4 h-4 text-[#9B3F23]" />
+                <span className="text-[#1E2229]">10-Year Comprehensive Warranty</span>
                 <span>•</span>
-                <span>{brand.happyHomes || '3,200+'} Beautiful Homes Delivered</span>
+                <span>German Precision Joinery</span>
               </div>
 
               {/* Operating Region Badge */}
@@ -211,19 +205,6 @@ export default function HomePage({ open3DModal, openEstimatorModal, setActivePag
                   >
                     <ArrowRight className="w-4 h-4" />
                   </button>
-                </div>
-              </div>
-
-              {/* Floating Testimonial Pill */}
-              <div className="absolute -top-4 -left-4 bg-white p-3 rounded-2xl shadow-xl border border-gray-100 hidden sm:flex items-center gap-3 animate-bounce" style={{ animationDuration: '4s' }}>
-                <div className="w-10 h-10 rounded-full bg-[#FAF2ED] text-[#9B3F23] flex items-center justify-center font-serif font-bold text-sm">
-                  LG
-                </div>
-                <div>
-                  <div className="flex text-amber-500">
-                    {'★★★★★'.split('').map((s, i) => <span key={i} className="text-xs">{s}</span>)}
-                  </div>
-                  <p className="text-[11px] font-semibold text-gray-800">"Handed over on Day 20 with 100% finish!"</p>
                 </div>
               </div>
             </div>
@@ -468,85 +449,7 @@ export default function HomePage({ open3DModal, openEstimatorModal, setActivePag
         </div>
       </section>
 
-      {/* 8. CLIENT TESTIMONIALS & GOOGLE REVIEWS */}
-      <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="px-3.5 py-1 rounded-full bg-[#FAF2ED] text-[#9B3F23] text-xs font-bold uppercase tracking-wider border border-[#E8CFCA]">
-            Verified Homeowner Experiences
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1E2229] mt-3">
-            Real Stories From Real Homes
-          </h2>
-          <p className="text-sm sm:text-base text-gray-600 mt-2">
-            Over 3,200+ homeowners have experienced the peace of mind of our 21-day handover guarantee.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {(testimonials && testimonials.length > 0 ? testimonials.slice(0, 3) : [
-            {
-              name: "Raghavendra & Priya Reddy",
-              project: "My Home Bhooja, Hyderabad",
-              bhk: "3 BHK Luxury",
-              handover: "Handed over in 20 Days",
-              rating: 5,
-              text: "LivGruha delivered our full 3BHK interior in exactly 20 days. The German Blum soft-close kitchen and fluted TV wall are stunning. No hidden charges at all!",
-              image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80"
-            },
-            {
-              name: "Suresh & Anitha Rao",
-              project: "Aparna Serene Park, Hyderabad",
-              bhk: "3 BHK Premium",
-              handover: "Handed over in 21 Days",
-              rating: 5,
-              text: "The free 3D design session helped us visualize every millimeter before paying a single rupee. The finishing of the floor-to-ceiling wardrobes is hotel-grade.",
-              image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
-            },
-            {
-              name: "Dr. Vikram & Sneha Joshi",
-              project: "Prestige High Fields, Hyderabad",
-              bhk: "4 BHK Villa",
-              handover: "Handed over in 21 Days",
-              rating: 5,
-              text: "Zero dust during on-site assembly because everything arrived pre-drilled from their CNC factory. Truly the most professional interior team in Hyderabad.",
-              image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80"
-            }
-          ]).map((t, idx) => (
-            <div
-              key={idx}
-              className="bg-white p-7 rounded-3xl border border-[#E6DFD5] shadow-md flex flex-col justify-between space-y-6 text-left"
-            >
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <div className="flex text-amber-500">
-                    {'★★★★★'.split('').map((s, i) => (
-                      <Star key={i} className="w-4 h-4 fill-amber-500 text-amber-500" />
-                    ))}
-                  </div>
-                  <span className="text-[11px] font-bold text-[#9B3F23] bg-[#FAF2ED] px-2.5 py-0.5 rounded-full border border-[#E8CFCA]">
-                    {t.handover || "Day 21 Handover"}
-                  </span>
-                </div>
-                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed italic">
-                  "{t.text}"
-                </p>
-              </div>
-
-              <div className="flex items-center gap-3.5 pt-4 border-t border-gray-100">
-                <div className="w-11 h-11 rounded-full bg-[#FAF2ED] text-[#9B3F23] flex items-center justify-center font-serif font-bold text-sm shrink-0">
-                  {t.name.slice(0, 2).toUpperCase()}
-                </div>
-                <div>
-                  <h4 className="text-sm font-bold text-gray-900">{t.name}</h4>
-                  <p className="text-[11px] text-gray-500">{t.project} • {t.bhk}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 9. HYDERABAD FLAGSHIP EXPERIENCE CENTER & BRANCHES */}
+      {/* 8. HYDERABAD FLAGSHIP EXPERIENCE CENTER & BRANCHES */}
       <section className="py-20 bg-[#FAF8F5] border-t border-[#E6DFD5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-3xl border border-[#E6DFD5] shadow-xl p-8 sm:p-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
