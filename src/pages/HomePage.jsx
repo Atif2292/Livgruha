@@ -322,8 +322,8 @@ export default function HomePage({ open3DModal, openEstimatorModal, setActivePag
           <span className="px-3.5 py-1 rounded-full bg-[#FAF2ED] text-[#9B3F23] text-xs font-bold uppercase tracking-wider border border-[#E8CFCA]">
             The Livgruha Advantage
           </span>
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1E2229] mt-3">
-            Why Discerning Homeowners Choose Us
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1E2229] mt-3 uppercase tracking-tight">
+            WHY Choose US
           </h2>
           <p className="text-sm sm:text-base text-gray-600 mt-2">
             No delays, no hidden price hikes, and no cheap filler boards. Only precision luxury craftsmanship.
@@ -372,7 +372,7 @@ export default function HomePage({ open3DModal, openEstimatorModal, setActivePag
         </div>
       </section>
 
-      {/* 7. BESPOKE INTERIOR PACKAGES & TIERS */}
+      {/* 7. THREE DIFFERENT PACKAGES & TIERS */}
       <section className="py-20 bg-white border-y border-[#E6DFD5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -380,7 +380,7 @@ export default function HomePage({ open3DModal, openEstimatorModal, setActivePag
               Engineered Excellence
             </span>
             <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1E2229] mt-3">
-              Bespoke Interior Packages
+              Three Different Packages
             </h2>
             <p className="text-sm sm:text-base text-gray-600 mt-2">
               Tailored specifications from express modular handovers to couture architectural villas.

@@ -559,9 +559,9 @@ export const WHY_CHOOSE_US = [
   },
   {
     id: 6,
-    title: "14 Experience Studios in TS, AP, KA",
-    desc: "Touch full-scale mockups, test Blum soft-close mechanics, and select from 500+ finishes in person.",
-    icon: "MapPin"
+    title: "Dedicated Project Architect",
+    desc: "A single dedicated interior architect oversees your project from 3D design to 21-day key handover.",
+    icon: "Users"
   }
 ];
 

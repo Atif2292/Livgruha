@@ -41,7 +41,7 @@ export default function Navbar({ activePage, setActivePage, open3DModal, openEst
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
       {/* Top Notification / Offer Bar */}
       <div className="bg-[#9B3F23] text-white py-1.5 px-4 text-xs sm:text-sm font-medium">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <div className="max-w-7xl mx-auto flex items-center justify-center text-center">
           <div className="flex items-center gap-2 overflow-hidden whitespace-nowrap">
             <span className="bg-[#FAF8F5]/20 text-[#FAF8F5] px-2 py-0.5 rounded text-[11px] font-bold tracking-wider uppercase">
               21-Day Handover
@@ -49,16 +49,6 @@ export default function Navbar({ activePage, setActivePage, open3DModal, openEst
             <span className="truncate">
               {banners.topOfferBar || "✨ Complete Home Interiors - Handover in Just 21 Days! Free 3D Design + 10-Year Warranty"}
             </span>
-          </div>
-          <div className="hidden md:flex items-center gap-3.5 text-xs text-white/90">
-            <a 
-              href={`tel:${(brand.phone || '').replace(/[^0-9]/g, '')}`} 
-              onClick={handleCallClick}
-              className="hover:underline font-semibold flex items-center gap-1.5"
-            >
-              <Phone className="w-3.5 h-3.5 text-amber-200" />
-              <span>Studio Hotline: {brand.phone}</span>
-            </a>
           </div>
         </div>
       </div>
@@ -116,15 +106,6 @@ export default function Navbar({ activePage, setActivePage, open3DModal, openEst
                 <Sparkles className="w-4 h-4 mr-1.5 text-amber-200 animate-spin" style={{ animationDuration: '8s' }} />
                 <span>FREE 3D DESIGN</span>
               </button>
-
-              <a
-                href={`tel:${(brand.phone || '').replace(/[^0-9]/g, '')}`}
-                onClick={handleCallClick}
-                className="inline-flex items-center justify-center p-2.5 rounded-full bg-[#FAF2ED] text-[#9B3F23] hover:bg-[#9B3F23] hover:text-white transition-all duration-200 border border-[#E8CFCA]"
-                title="Call our Senior Interior Designer"
-              >
-                <Phone className="w-4 h-4" />
-              </a>
             </div>
 
             {/* Mobile Hamburger Button */}
