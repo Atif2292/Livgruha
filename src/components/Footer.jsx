@@ -78,7 +78,7 @@ export default function Footer({ setActivePage, open3DModal, openEstimatorModal,
               onClick={() => handleNav('home')} 
               className="text-left focus:outline-none cursor-pointer group"
             >
-              <BrandLogo variant="dark" layout="horizontal" size="large" />
+              <BrandLogo variant="dark" size="footer" />
             </button>
             
             <p className="text-xs sm:text-sm text-gray-400 max-w-sm leading-relaxed">
