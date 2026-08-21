@@ -68,15 +68,16 @@ export default function ContactPage({ open3DModal, openEstimatorModal }) {
     <div className="pt-24 sm:pt-28 font-sans bg-[#FAF8F5] min-h-screen pb-20">
       
       {/* 1. HEADER */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-14">
-        <span className="px-3.5 py-1 rounded-full bg-[#FAF2ED] text-[#9B3F23] text-xs font-bold uppercase tracking-wider border border-[#E8CFCA]">
-          Connect With Our Senior Architects
-        </span>
-        <h1 className="text-3xl sm:text-5xl font-serif font-bold text-[#1E2229] mt-3">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
+        <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-[#FAF2ED] text-[#9B3F23] text-xs font-bold uppercase tracking-wider border border-[#E8CFCA] mb-3">
+          <MapPin className="w-3.5 h-3.5" />
+          <span>Serving Across Andhra Pradesh, Telangana &amp; Karnataka</span>
+        </div>
+        <h1 className="text-3xl sm:text-5xl font-serif font-bold text-[#1E2229]">
           Let's Design Your Dream Home
         </h1>
         <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto mt-2.5">
-          Visit our Hyderabad Experience Studio, request a designer home visit, or book a virtual 3D consultation.
+          Visit our Hyderabad Main Experience Center, request an on-site architect visit across Telangana, AP, or Karnataka, or book a free 3D design consultation.
         </p>
       </div>
 
@@ -89,9 +90,9 @@ export default function ContactPage({ open3DModal, openEstimatorModal }) {
             {/* Quick Contact Card */}
             <div className="bg-gradient-to-r from-[#9B3F23] via-[#B84A2A] to-[#C68B59] rounded-3xl p-7 text-white shadow-xl space-y-6">
               <div>
-                <h3 className="text-2xl font-serif font-bold text-white">Direct Hotline</h3>
+                <h3 className="text-2xl font-serif font-bold text-white">Direct Helpline</h3>
                 <p className="text-xs text-amber-100/90 mt-1">
-                  Speak directly with our senior architectural lead for quick quotes and design queries.
+                  Speak directly with our senior interior architects for quick quotes, design queries, and site bookings.
                 </p>
               </div>
 
@@ -99,12 +100,12 @@ export default function ContactPage({ open3DModal, openEstimatorModal }) {
                 <a
                   href={`tel:${(brand.phone || '+917995672323').replace(/[^0-9]/g, '')}`}
                   onClick={handleCallClick}
-                  className="flex items-center gap-3.5 p-3 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md transition-colors"
+                  className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-white/15 hover:bg-white/25 border border-white/20 backdrop-blur-md transition-all shadow-sm"
                 >
-                  <Phone className="w-5 h-5 text-amber-200" />
+                  <Phone className="w-5 h-5 text-amber-200 animate-pulse" />
                   <div>
-                    <span className="text-[11px] text-white/70 block">Telephone Hotline:</span>
-                    <span className="font-bold">{brand.phone || '+91 79956 72323'}</span>
+                    <span className="text-[11px] text-white/80 block uppercase tracking-wider font-semibold">Studio Contact Number:</span>
+                    <span className="text-lg font-bold tracking-wide">+91 79956 72323</span>
                   </div>
                 </a>
 
@@ -113,7 +114,7 @@ export default function ContactPage({ open3DModal, openEstimatorModal }) {
                   target="_blank"
                   rel="noreferrer"
                   onClick={handleWhatsAppClick}
-                  className="flex items-center gap-3.5 p-3 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md transition-colors"
+                  className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md transition-colors"
                 >
                   <MessageSquare className="w-5 h-5 text-emerald-300" />
                   <div>
@@ -135,7 +136,7 @@ export default function ContactPage({ open3DModal, openEstimatorModal }) {
               </div>
 
               <div className="pt-2 border-t border-white/20 flex items-center justify-between text-xs text-amber-100">
-                <span>Showrooms Open: 10:00 AM – 8:30 PM</span>
+                <span>Experience Centers Open: 10:00 AM – 8:30 PM</span>
                 <span>All 7 Days</span>
               </div>
             </div>
@@ -144,17 +145,41 @@ export default function ContactPage({ open3DModal, openEstimatorModal }) {
             <div className="bg-white rounded-3xl border border-[#E6DFD5] p-6 shadow-sm space-y-3">
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#9B3F23]">
                 <MapPin className="w-4 h-4" />
-                <span>Hyderabad Operations & Design Hub</span>
+                <span>Hyderabad Main Office &amp; Flagship Experience Center</span>
               </div>
               <h4 className="text-base font-serif font-bold text-gray-900">
-                LivGruha Interiors — Hyderabad
+                LivGruha Interiors — Hyderabad Main Branch
               </h4>
-              <p className="text-xs text-gray-600 leading-relaxed">
-                Hyderabad, Telangana, India
+              <p className="text-xs text-gray-700 leading-relaxed font-medium">
+                2nd Floor, Manjeera Majestic Commercial Mall, JNTU Road, KPHB, Kukatpally, Hyderabad – 500072.
               </p>
-              <div className="pt-2 text-[11px] text-gray-500 flex items-center gap-2">
-                <Clock className="w-3.5 h-3.5 text-[#9B3F23]" />
-                <span>Direct Hotline: +91 79956 72323 • On-Site & Virtual 3D Consultations</span>
+              <div className="pt-2 text-[11px] text-gray-600 flex flex-col gap-1.5 border-t border-gray-100">
+                <div className="flex items-center gap-2">
+                  <Clock className="w-3.5 h-3.5 text-[#9B3F23]" />
+                  <span>Hours: 10:00 AM – 8:30 PM (All 7 Days)</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Phone className="w-3.5 h-3.5 text-[#9B3F23]" />
+                  <span>Helpline: +91 79956 72323 • Free 3D Design Walkthroughs</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Regional Branch Operations Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="bg-white p-4 rounded-2xl border border-[#E6DFD5] text-left space-y-1.5 shadow-xs">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#9B3F23] bg-[#FAF2ED] px-2 py-0.5 rounded">
+                  Andhra Pradesh Operations
+                </span>
+                <p className="text-xs font-bold text-gray-900">Visakhapatnam, Vijayawada, Guntur</p>
+                <p className="text-[11px] text-gray-500">Active site measurements &amp; 21-day turnkey delivery.</p>
+              </div>
+              <div className="bg-white p-4 rounded-2xl border border-[#E6DFD5] text-left space-y-1.5 shadow-xs">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#9B3F23] bg-[#FAF2ED] px-2 py-0.5 rounded">
+                  Karnataka Operations
+                </span>
+                <p className="text-xs font-bold text-gray-900">Bangalore &amp; Mysore</p>
+                <p className="text-[11px] text-gray-500">Active on-site consultations &amp; modular joinery.</p>
               </div>
             </div>
           </div>

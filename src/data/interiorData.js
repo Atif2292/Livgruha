@@ -16,13 +16,13 @@ export const BRAND_INFO = {
   supportEmail: "support@livgruhainteriors.com",
   projectsEmail: "projects@livgruhainteriors.com",
   careersEmail: "careers@livgruhainteriors.com",
-  address: "Hyderabad, Telangana, India",
+  address: "2nd Floor, Manjeera Majestic Commercial Mall, JNTU Road, KPHB, Kukatpally, Hyderabad – 500072",
   experienceCenters: 1,
   happyHomes: "3,200+",
   expertDesigners: "85+",
   avgRating: "4.94",
   warrantyYears: "10 Years",
-  servingStates: "Hyderabad & Telangana",
+  servingStates: "Serving Across Andhra Pradesh, Telangana & Karnataka",
   handoverCommitment: "Handover in Just 21 Days",
   deliveryGuarantees: {
     express: "21 Working Days",
@@ -465,30 +465,79 @@ export const PARTNER_BRANDS = [
 export const CITIES_DATA = [
   {
     id: "hyderabad",
-    name: "Hyderabad",
+    name: "Hyderabad (Main Office & Flagship Branch)",
     state: "Telangana",
-    tag: "Headquarters & Flagship Experience Center",
+    tag: "Headquarters & Main Experience Branch",
     experienceCentersCount: 1,
     homesCompleted: "3,200+",
     image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=80",
     centers: [
       {
-        name: "Hyderabad Design & Consultation Hub",
-        address: "Hyderabad, Telangana, India",
+        name: "Hyderabad Main Office & Experience Branch",
+        address: "2nd Floor, Manjeera Majestic Commercial Mall, JNTU Road, KPHB, Kukatpally, Hyderabad – 500072",
         phone: "+91 79956 72323",
         timings: "10:00 AM - 8:30 PM (All 7 Days)",
-        amenities: ["On-Site & Studio Consultations", "Material & Hardware Catalogues", "Photorealistic 3D Design Walkthroughs"]
+        amenities: ["Bespoke Interior Consultations", "Material & Hardware Sample Gallery", "Photorealistic 3D Design Walkthroughs", "Kukatpally / KPHB Main Center"]
       }
     ],
     topSocieties: [
-      "My Home Bhooja", 
-      "Aparna Serene Park", 
-      "Aparna Sarovar Zenith", 
-      "Prestige High Fields", 
-      "Jayabheri The Peak", 
-      "Rajapushpa Atria", 
-      "Lanco Hills", 
-      "Honer Vivantis"
+      "KPHB & Kukatpally Corridors",
+      "Hitec City & Madhapur",
+      "Gachibowli & Financial District",
+      "Jubilee Hills & Banjara Hills",
+      "My Home Bhooja & Aparna Zeniths",
+      "Prestige High Fields",
+      "Secunderabad & Miyapur",
+      "Warangal & Karimnagar"
+    ]
+  },
+  {
+    id: "andhra-pradesh",
+    name: "Andhra Pradesh Branches",
+    state: "Andhra Pradesh",
+    tag: "Active Operations & Site Consultations",
+    experienceCentersCount: 1,
+    homesCompleted: "1,450+",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80",
+    centers: [
+      {
+        name: "Andhra Pradesh Regional Operations & Client Desk",
+        address: "Active Consultations & Turnkey Execution across Visakhapatnam, Vijayawada & Guntur",
+        phone: "+91 79956 72323",
+        timings: "10:00 AM - 8:30 PM (All 7 Days)",
+        amenities: ["On-Site Measurements & Architectural Consultation", "Material Swatch Box Delivery", "21-Day Turnkey Modular Handover"]
+      }
+    ],
+    topSocieties: [
+      "Visakhapatnam (MVP Colony, Madhurawada, Rushikonda)",
+      "Vijayawada (Benz Circle, Poranki, Kanuru)",
+      "Guntur (Amaravati Road, Lakshmipuram)",
+      "Tirupati & Rajahmundry",
+      "Kakinada & Nellore"
+    ]
+  },
+  {
+    id: "karnataka",
+    name: "Karnataka Branches",
+    state: "Karnataka",
+    tag: "Active Operations & Site Consultations",
+    experienceCentersCount: 1,
+    homesCompleted: "1,100+",
+    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80",
+    centers: [
+      {
+        name: "Karnataka Regional Operations & Client Desk",
+        address: "Active Consultations & Turnkey Execution across Bangalore & Mysore",
+        phone: "+91 79956 72323",
+        timings: "10:00 AM - 8:30 PM (All 7 Days)",
+        amenities: ["On-Site Architect Consultation", "Full 3D Design Layout Presentation", "Precision German Blum Modular Joinery"]
+      }
+    ],
+    topSocieties: [
+      "Bangalore (Whitefield, Sarjapur Road, HSR Layout)",
+      "Bangalore (Electronic City, Bellandur, Hebbal)",
+      "Bangalore (Indiranagar, Koramangala)",
+      "Mysore (Vijayanagar, Gokulam)"
     ]
   }
 ];

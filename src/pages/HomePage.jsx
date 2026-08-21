@@ -105,9 +105,9 @@ export default function HomePage({ open3DModal, openEstimatorModal, setActivePag
               </div>
 
               {/* Operating Region Badge */}
-              <div className="text-xs font-bold text-gray-500 uppercase tracking-wider flex items-center gap-2">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FAF2ED] text-[#9B3F23] text-xs font-bold border border-[#E8CFCA]">
                 <MapPin className="w-3.5 h-3.5 text-[#9B3F23]" />
-                <span>Hyderabad & Telangana Flagship Studios</span>
+                <span>Serving Across Andhra Pradesh, Telangana &amp; Karnataka</span>
               </div>
 
               {/* Main Headline */}
@@ -153,15 +153,15 @@ export default function HomePage({ open3DModal, openEstimatorModal, setActivePag
                   <span>WhatsApp Us</span>
                 </a>
 
-                {/* Call Now CTA */}
+                {/* Direct Call Helpline CTA */}
                 <a
                   href={`tel:${(brand.phone || '+917995672323').replace(/[^0-9]/g, '')}`}
                   onClick={handleCallClick}
-                  className="px-4 py-3.5 rounded-full text-xs font-bold text-gray-700 bg-gray-100 hover:bg-gray-200 flex items-center justify-center gap-1.5 transition-colors"
-                  title="Call Studio"
+                  className="px-4 py-3.5 rounded-full text-xs sm:text-sm font-bold text-[#9B3F23] bg-[#FAF2ED] hover:bg-[#9B3F23] hover:text-white border border-[#E8CFCA] flex items-center justify-center gap-1.5 transition-all shadow-xs group"
+                  title="Call Studio Helpline"
                 >
-                  <Phone className="w-3.5 h-3.5 text-[#9B3F23]" />
-                  <span>Call Now</span>
+                  <Phone className="w-3.5 h-3.5 text-[#9B3F23] group-hover:text-white transition-colors" />
+                  <span>Call: +91 79956 72323</span>
                 </a>
               </div>
 
@@ -472,8 +472,8 @@ export default function HomePage({ open3DModal, openEstimatorModal, setActivePag
                 <div className="flex items-start gap-2.5">
                   <MapPin className="w-4 h-4 text-[#9B3F23] shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold text-gray-900 block">Service Hub & Operations:</span>
-                    <span>Hyderabad, Telangana, India</span>
+                    <span className="font-bold text-gray-900 block">Hyderabad Main Branch &amp; Head Office:</span>
+                    <span>2nd Floor, Manjeera Majestic Commercial Mall, JNTU Road, KPHB, Kukatpally, Hyderabad – 500072</span>
                   </div>
                 </div>
 
@@ -484,7 +484,9 @@ export default function HomePage({ open3DModal, openEstimatorModal, setActivePag
 
                 <div className="flex items-center gap-2.5">
                   <Phone className="w-4 h-4 text-[#9B3F23] shrink-0" />
-                  <span>Direct Hotline: {brand.phone || "+91 79956 72323"}</span>
+                  <a href="tel:+917995672323" className="font-bold text-[#9B3F23] hover:underline">
+                    Direct Phone: +91 79956 72323
+                  </a>
                 </div>
               </div>
 
@@ -500,7 +502,7 @@ export default function HomePage({ open3DModal, openEstimatorModal, setActivePag
                   onClick={() => setActivePage('cities')}
                   className="px-6 py-3 rounded-full text-xs font-bold text-[#9B3F23] bg-[#FAF2ED] hover:bg-[#F3E2D8] border border-[#E8CFCA] flex items-center gap-2 cursor-pointer"
                 >
-                  <span>Explore All Hyderabad Branches</span>
+                  <span>Explore AP, TS &amp; KA Branches</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>

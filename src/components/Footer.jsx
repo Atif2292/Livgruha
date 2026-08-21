@@ -88,16 +88,17 @@ export default function Footer({ setActivePage, open3DModal, openEstimatorModal,
             <div className="pt-2 flex flex-col space-y-2.5 text-xs text-gray-300">
               <div className="flex items-start gap-2 text-gray-300">
                 <MapPin className="w-4 h-4 text-[#C68B59] shrink-0 mt-0.5" />
-                <span>Hyderabad, Telangana, India</span>
+                <span>2nd Floor, Manjeera Majestic Commercial Mall, JNTU Road, KPHB, Kukatpally, Hyderabad – 500072</span>
               </div>
 
               <a 
                 href={`tel:${(brand.phone || '+917995672323').replace(/[^0-9]/g, '')}`} 
                 onClick={handleCallClick}
-                className="flex items-center gap-2 hover:text-[#C68B59] transition-colors"
+                className="flex items-center gap-2 text-amber-200 hover:text-white transition-colors py-1"
               >
-                <Phone className="w-3.5 h-3.5 text-[#C68B59]" />
-                <span className="font-semibold">{brand.phone || '+91 79956 72323'} (10:00 AM - 8:30 PM)</span>
+                <Phone className="w-4 h-4 text-amber-300 animate-pulse" />
+                <span className="font-bold text-sm tracking-wide">+91 79956 72323</span>
+                <span className="text-[10px] text-gray-400">(10:00 AM - 8:30 PM)</span>
               </a>
 
               <a href={`mailto:${brand.email || 'info@livgruhainteriors.com'}`} className="flex items-center gap-2 hover:text-[#C68B59] transition-colors">
@@ -115,6 +116,8 @@ export default function Footer({ setActivePage, open3DModal, openEstimatorModal,
             <ul className="space-y-2.5 text-xs text-gray-300">
               <li><button onClick={() => handleNav('home')} className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer"><ChevronRight className="w-3 h-3 text-[#C68B59]" /> Home Overview</button></li>
               <li><button onClick={() => handleNav('about')} className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer"><ChevronRight className="w-3 h-3 text-[#C68B59]" /> About LivGruha</button></li>
+              <li><button onClick={() => handleNav('interior')} className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer"><ChevronRight className="w-3 h-3 text-[#C68B59]" /> All Services</button></li>
+              <li><button onClick={() => handleNav('cities')} className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer"><ChevronRight className="w-3 h-3 text-[#C68B59]" /> Branches &amp; Locations</button></li>
               <li><button onClick={() => handleNav('how-it-works')} className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer"><ChevronRight className="w-3 h-3 text-[#C68B59]" /> How It Works</button></li>
               <li><button onClick={() => handleNav('portfolio')} className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer"><ChevronRight className="w-3 h-3 text-[#C68B59]" /> Completed Projects</button></li>
               <li><button onClick={() => handleNav('contact')} className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer"><ChevronRight className="w-3 h-3 text-[#C68B59]" /> Contact Us</button></li>
@@ -130,9 +133,9 @@ export default function Footer({ setActivePage, open3DModal, openEstimatorModal,
               <li><span className="hover:text-white cursor-pointer" onClick={() => handleNav('interior')}>Modular Kitchens (Blum)</span></li>
               <li><span className="hover:text-white cursor-pointer" onClick={() => handleNav('interior')}>Master Bedroom Suites</span></li>
               <li><span className="hover:text-white cursor-pointer" onClick={() => handleNav('interior')}>Floor-to-Ceiling Wardrobes</span></li>
-              <li><span className="hover:text-white cursor-pointer" onClick={() => handleNav('interior')}>Living TV & Acoustic Louvers</span></li>
+              <li><span className="hover:text-white cursor-pointer" onClick={() => handleNav('interior')}>Living TV &amp; Acoustic Louvers</span></li>
               <li><span className="hover:text-white cursor-pointer" onClick={() => handleNav('interior')}>Sacred Teak Pooja Mandirs</span></li>
-              <li><span className="hover:text-white cursor-pointer" onClick={() => handleNav('interior')}>False Ceiling & Profile LEDs</span></li>
+              <li><span className="hover:text-white cursor-pointer" onClick={() => handleNav('interior')}>False Ceiling &amp; Profile LEDs</span></li>
             </ul>
           </div>
 
@@ -141,23 +144,50 @@ export default function Footer({ setActivePage, open3DModal, openEstimatorModal,
             <h5 className="text-xs font-bold uppercase tracking-wider text-[#C68B59] mb-4">
               Service Locations
             </h5>
-            <ul className="space-y-2.5 text-xs text-gray-300">
+            <p className="text-[11px] text-[#C68B59] font-bold uppercase tracking-wider mb-2">
+              Serving Across AP, TS &amp; Karnataka
+            </p>
+            <ul className="space-y-2 text-xs text-gray-300">
               <li>
                 <button 
-                  onClick={() => handleNav('contact')} 
-                  className="hover:text-white transition-colors flex items-center justify-between w-full cursor-pointer text-left"
+                  onClick={() => handleNav('cities')} 
+                  className="hover:text-white transition-colors flex items-center justify-between w-full cursor-pointer text-left py-1 border-b border-gray-800"
                 >
                   <div>
-                    <span className="font-semibold text-white block">Hyderabad, Telangana</span>
-                    <span className="text-[10px] text-gray-400">Complete Home Interiors</span>
+                    <span className="font-semibold text-white block">Telangana (Main Branch)</span>
+                    <span className="text-[10px] text-gray-400">Hyderabad (KPHB, Kukatpally) &amp; Warangal</span>
                   </div>
-                  <span className="text-[10px] px-2 py-0.5 rounded bg-[#FAF2ED]/10 text-[#C68B59] border border-[#C68B59]/30">Active</span>
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800">Active</span>
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleNav('cities')} 
+                  className="hover:text-white transition-colors flex items-center justify-between w-full cursor-pointer text-left py-1 border-b border-gray-800"
+                >
+                  <div>
+                    <span className="font-semibold text-white block">Andhra Pradesh</span>
+                    <span className="text-[10px] text-gray-400">Vizag, Vijayawada, Guntur, Tirupati</span>
+                  </div>
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800">Active</span>
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleNav('cities')} 
+                  className="hover:text-white transition-colors flex items-center justify-between w-full cursor-pointer text-left py-1"
+                >
+                  <div>
+                    <span className="font-semibold text-white block">Karnataka</span>
+                    <span className="text-[10px] text-gray-400">Bangalore (HSR, Whitefield) &amp; Mysore</span>
+                  </div>
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800">Active</span>
                 </button>
               </li>
               <li>
                 <button 
                   onClick={() => handleNav('contact')} 
-                  className="text-amber-200 hover:text-white text-xs font-semibold flex items-center gap-1 mt-2 cursor-pointer"
+                  className="text-amber-200 hover:text-white text-xs font-semibold flex items-center gap-1 mt-2.5 cursor-pointer"
                 >
                   <span>Book Studio Walkthrough ➔</span>
                 </button>

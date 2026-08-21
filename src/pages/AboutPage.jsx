@@ -139,11 +139,18 @@ export default function AboutPage({ open3DModal, openEstimatorModal, setActivePa
               <Sparkles className="w-4 h-4" />
               <span>Book Free 3D Design Session</span>
             </button>
+            <a
+              href="tel:+917995672323"
+              className="px-6 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider text-white border border-white/60 bg-white/10 hover:bg-white/20 cursor-pointer flex items-center gap-2"
+            >
+              <Phone className="w-3.5 h-3.5" />
+              <span>Call: +91 79956 72323</span>
+            </a>
             <button
               onClick={() => setActivePage('portfolio')}
               className="px-6 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider text-white border border-white/40 hover:bg-white/10 cursor-pointer"
             >
-              Explore Completed Projects
+              Explore Projects
             </button>
           </div>
         </div>
