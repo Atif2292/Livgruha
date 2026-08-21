@@ -111,17 +111,6 @@ export default function Navbar({ activePage, setActivePage, open3DModal, openEst
 
             {/* Header Right Action Buttons */}
             <div className="hidden sm:flex items-center gap-3">
-              {/* Highlighted Direct Contact Number */}
-              <a
-                href={`tel:${(brand.phone || '+917995672323').replace(/[^0-9]/g, '')}`}
-                onClick={handleCallClick}
-                className="hidden xl:inline-flex items-center gap-2 px-3.5 py-2 rounded-full font-bold text-xs bg-[#FAF2ED] text-[#9B3F23] border border-[#E8CFCA] hover:bg-[#9B3F23] hover:text-white transition-all shadow-xs group"
-                title="Call LivGruha Interiors"
-              >
-                <Phone className="w-3.5 h-3.5 text-[#9B3F23] group-hover:text-white transition-colors" />
-                <span>+91 79956 72323</span>
-              </a>
-
               <button
                 onClick={open3DModal}
                 className="group relative inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-bold text-white bg-gradient-to-r from-[#9B3F23] via-[#B84A2A] to-[#C68B59] hover:opacity-95 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
