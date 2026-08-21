@@ -154,8 +154,8 @@ export default function Footer({ setActivePage, open3DModal, openEstimatorModal,
                   className="hover:text-white transition-colors flex items-center justify-between w-full cursor-pointer text-left py-1 border-b border-gray-800"
                 >
                   <div>
-                    <span className="font-semibold text-white block">Telangana (Main Branch)</span>
-                    <span className="text-[10px] text-gray-400">Hyderabad (KPHB, Kukatpally) &amp; Warangal</span>
+                    <span className="font-semibold text-white block">Telangana</span>
+                    <span className="text-[10px] text-gray-400">Hyderabad Main Branch &amp; Statewide Coverage</span>
                   </div>
                   <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800">Active</span>
                 </button>
@@ -167,7 +167,7 @@ export default function Footer({ setActivePage, open3DModal, openEstimatorModal,
                 >
                   <div>
                     <span className="font-semibold text-white block">Andhra Pradesh</span>
-                    <span className="text-[10px] text-gray-400">Vizag, Vijayawada, Guntur, Tirupati</span>
+                    <span className="text-[10px] text-gray-400">Serving Across Andhra Pradesh</span>
                   </div>
                   <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800">Active</span>
                 </button>
@@ -179,7 +179,7 @@ export default function Footer({ setActivePage, open3DModal, openEstimatorModal,
                 >
                   <div>
                     <span className="font-semibold text-white block">Karnataka</span>
-                    <span className="text-[10px] text-gray-400">Bangalore (HSR, Whitefield) &amp; Mysore</span>
+                    <span className="text-[10px] text-gray-400">Serving Across Karnataka</span>
                   </div>
                   <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800">Active</span>
                 </button>

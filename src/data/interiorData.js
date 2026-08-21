@@ -488,9 +488,8 @@ export const CITIES_DATA = [
       "My Home Bhooja & Aparna Zeniths",
       "Prestige High Fields",
       "Secunderabad & Miyapur",
-      "Warangal & Karimnagar",
-      "Andhra Pradesh (Visakhapatnam, Vijayawada, Guntur)",
-      "Karnataka (Bangalore, Mysore)"
+      "Andhra Pradesh",
+      "Karnataka"
     ]
   }
 ];
@@ -509,7 +508,7 @@ export const TESTIMONIALS = [
   {
     id: 2,
     name: "Vikram & Ananya Sharma",
-    location: "Sobha Dream Acres, Bangalore",
+    location: "Hyderabad, Telangana",
     property: "3 BHK Apartment",
     rating: 5,
     date: "February 2026",
@@ -519,12 +518,12 @@ export const TESTIMONIALS = [
   {
     id: 3,
     name: "Suresh & Lavanya Rao",
-    location: "MVP Colony, Visakhapatnam",
-    property: "3 BHK Sea-View Residence",
+    location: "Hyderabad, Telangana",
+    property: "3 BHK Premium Flat",
     rating: 5,
-    date: "January 2026",
-    review: "Living near the coastline in Vizag, humidity was our biggest fear. LivGruha used certified IS-710 Marine BWR plywood and anti-corrosive SS-304 hardware. Delivered right on schedule in 21 days!",
-    avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80"
+    date: "December 2025",
+    review: "The 100% IS-710 Marine BWR plywood build quality is rock solid. LivGruha provided a free 3D design walkthrough before we committed a single rupee. The hand-crafted teak pooja unit is divine.",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
   }
 ];
 
@@ -578,14 +577,14 @@ export const FAQS = [
   },
   {
     q: "Which states and regions do you currently serve?",
-    a: "We actively serve homeowners across Telangana (Hyderabad, Warangal), Andhra Pradesh (Visakhapatnam, Vijayawada, Guntur), and Karnataka (Bangalore, Mysore)."
+    a: "We actively serve homeowners across Andhra Pradesh, Telangana, and Karnataka with guaranteed 21-day turnkey handovers."
   },
   {
     q: "What warranty do I receive on modular woodwork & hardware?",
     a: "You receive an official 10-Year Comprehensive Warranty on certified IS-710 Marine BWR/HDHMR plywood against moisture and termite damage, plus lifetime warranty on authentic Blum & Hettich German soft-close mechanisms."
   },
   {
-    q: "Can I visit your Experience Studios before booking?",
-    a: "Yes! We have flagship Experience Studios across Telangana, Andhra Pradesh, and Karnataka featuring full-scale 2BHK/3BHK mockups, live kitchens, and 500+ material finish swatches."
+    q: "Can I visit your Experience Studio before booking?",
+    a: "Yes! You can visit our Main Experience Studio at 2nd Floor, Manjeera Majestic Commercial Mall, JNTU Road, KPHB, Kukatpally, Hyderabad – 500072 to test live Blum kitchens, inspect certified IS-710 marine plywood, and explore 500+ finishes in person."
   }
 ];

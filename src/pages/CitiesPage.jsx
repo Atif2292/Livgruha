@@ -131,15 +131,12 @@ export default function CitiesPage({ open3DModal, openEstimatorModal }) {
                 <Building className="w-5 h-5" />
               </div>
               <h4 className="text-lg font-serif font-bold text-gray-900">Telangana</h4>
-              <p className="text-xs text-[#9B3F23] font-semibold">
-                Main Branch (Kukatpally) &amp; Statewide Service
-              </p>
               <p className="text-xs text-gray-600 leading-relaxed">
-                Hyderabad (KPHB, Hitec City, Gachibowli, Jubilee Hills, Secunderabad), Warangal, and Karimnagar.
+                Main Branch: 2nd Floor, Manjeera Majestic Commercial Mall, JNTU Road, KPHB, Kukatpally, Hyderabad – 500072.
               </p>
               <div className="pt-2 text-[11px] text-emerald-700 font-semibold flex items-center gap-1">
                 <CheckCircle2 className="w-3.5 h-3.5" />
-                <span>On-Site 3D Consultations &amp; 21-Day Execution</span>
+                <span>21-Day Turnkey Modular Handover</span>
               </div>
             </div>
 
@@ -149,15 +146,12 @@ export default function CitiesPage({ open3DModal, openEstimatorModal }) {
                 <Building className="w-5 h-5" />
               </div>
               <h4 className="text-lg font-serif font-bold text-gray-900">Andhra Pradesh</h4>
-              <p className="text-xs text-[#9B3F23] font-semibold">
-                Statewide Doorstep Service Coverage
-              </p>
               <p className="text-xs text-gray-600 leading-relaxed">
-                Visakhapatnam, Vijayawada, Guntur, Tirupati, Rajahmundry, Kakinada, and Nellore.
+                Serving home interior projects across Andhra Pradesh with free 3D design and precision modular execution.
               </p>
               <div className="pt-2 text-[11px] text-emerald-700 font-semibold flex items-center gap-1">
                 <CheckCircle2 className="w-3.5 h-3.5" />
-                <span>Doorstep Measurements &amp; Modular Handover</span>
+                <span>Certified IS-710 Marine BWR Plywood</span>
               </div>
             </div>
 
@@ -167,15 +161,12 @@ export default function CitiesPage({ open3DModal, openEstimatorModal }) {
                 <Building className="w-5 h-5" />
               </div>
               <h4 className="text-lg font-serif font-bold text-gray-900">Karnataka</h4>
-              <p className="text-xs text-[#9B3F23] font-semibold">
-                Statewide Doorstep Service Coverage
-              </p>
               <p className="text-xs text-gray-600 leading-relaxed">
-                Bangalore (Whitefield, Sarjapur, HSR Layout, Electronic City, Hebbal) and Mysore.
+                Serving home interior projects across Karnataka with genuine German Blum mechanisms.
               </p>
               <div className="pt-2 text-[11px] text-emerald-700 font-semibold flex items-center gap-1">
                 <CheckCircle2 className="w-3.5 h-3.5" />
-                <span>Direct Turnkey Delivery with German Blum Hardware</span>
+                <span>10-Year Comprehensive Warranty</span>
               </div>
             </div>
           </div>
