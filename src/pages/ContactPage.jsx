@@ -165,22 +165,15 @@ export default function ContactPage({ open3DModal, openEstimatorModal }) {
               </div>
             </div>
 
-            {/* Regional Branch Operations Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <div className="bg-white p-4 rounded-2xl border border-[#E6DFD5] text-left space-y-1.5 shadow-xs">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-[#9B3F23] bg-[#FAF2ED] px-2 py-0.5 rounded">
-                  Andhra Pradesh Operations
-                </span>
-                <p className="text-xs font-bold text-gray-900">Visakhapatnam, Vijayawada, Guntur</p>
-                <p className="text-[11px] text-gray-500">Active site measurements &amp; 21-day turnkey delivery.</p>
+            {/* Regional Doorstep Service Coverage */}
+            <div className="bg-[#FAF2ED] p-4 rounded-2xl border border-[#E8CFCA] text-left space-y-1">
+              <div className="flex items-center gap-1.5 text-[#9B3F23] font-bold text-xs">
+                <MapPin className="w-3.5 h-3.5" />
+                <span>Serving Across Andhra Pradesh, Telangana &amp; Karnataka</span>
               </div>
-              <div className="bg-white p-4 rounded-2xl border border-[#E6DFD5] text-left space-y-1.5 shadow-xs">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-[#9B3F23] bg-[#FAF2ED] px-2 py-0.5 rounded">
-                  Karnataka Operations
-                </span>
-                <p className="text-xs font-bold text-gray-900">Bangalore &amp; Mysore</p>
-                <p className="text-[11px] text-gray-500">Active on-site consultations &amp; modular joinery.</p>
-              </div>
+              <p className="text-[11px] text-gray-600">
+                Doorstep 3D design consultations and turnkey 21-day modular handover available across Telangana, Andhra Pradesh, and Karnataka.
+              </p>
             </div>
           </div>
 

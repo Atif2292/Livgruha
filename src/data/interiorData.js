@@ -465,19 +465,19 @@ export const PARTNER_BRANDS = [
 export const CITIES_DATA = [
   {
     id: "hyderabad",
-    name: "Hyderabad (Main Office & Flagship Branch)",
+    name: "Hyderabad (Main Office & Experience Center)",
     state: "Telangana",
-    tag: "Headquarters & Main Experience Branch",
+    tag: "Headquarters & Main Experience Center",
     experienceCentersCount: 1,
     homesCompleted: "3,200+",
     image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=80",
     centers: [
       {
-        name: "Hyderabad Main Office & Experience Branch",
+        name: "Hyderabad Main Office & Experience Studio",
         address: "2nd Floor, Manjeera Majestic Commercial Mall, JNTU Road, KPHB, Kukatpally, Hyderabad – 500072",
         phone: "+91 79956 72323",
         timings: "10:00 AM - 8:30 PM (All 7 Days)",
-        amenities: ["Bespoke Interior Consultations", "Material & Hardware Sample Gallery", "Photorealistic 3D Design Walkthroughs", "Kukatpally / KPHB Main Center"]
+        amenities: ["Bespoke Interior Consultations", "Material & Hardware Sample Gallery", "Photorealistic 3D Design Walkthroughs", "KPHB Kukatpally Main Studio"]
       }
     ],
     topSocieties: [
@@ -488,56 +488,9 @@ export const CITIES_DATA = [
       "My Home Bhooja & Aparna Zeniths",
       "Prestige High Fields",
       "Secunderabad & Miyapur",
-      "Warangal & Karimnagar"
-    ]
-  },
-  {
-    id: "andhra-pradesh",
-    name: "Andhra Pradesh Branches",
-    state: "Andhra Pradesh",
-    tag: "Active Operations & Site Consultations",
-    experienceCentersCount: 1,
-    homesCompleted: "1,450+",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80",
-    centers: [
-      {
-        name: "Andhra Pradesh Regional Operations & Client Desk",
-        address: "Active Consultations & Turnkey Execution across Visakhapatnam, Vijayawada & Guntur",
-        phone: "+91 79956 72323",
-        timings: "10:00 AM - 8:30 PM (All 7 Days)",
-        amenities: ["On-Site Measurements & Architectural Consultation", "Material Swatch Box Delivery", "21-Day Turnkey Modular Handover"]
-      }
-    ],
-    topSocieties: [
-      "Visakhapatnam (MVP Colony, Madhurawada, Rushikonda)",
-      "Vijayawada (Benz Circle, Poranki, Kanuru)",
-      "Guntur (Amaravati Road, Lakshmipuram)",
-      "Tirupati & Rajahmundry",
-      "Kakinada & Nellore"
-    ]
-  },
-  {
-    id: "karnataka",
-    name: "Karnataka Branches",
-    state: "Karnataka",
-    tag: "Active Operations & Site Consultations",
-    experienceCentersCount: 1,
-    homesCompleted: "1,100+",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80",
-    centers: [
-      {
-        name: "Karnataka Regional Operations & Client Desk",
-        address: "Active Consultations & Turnkey Execution across Bangalore & Mysore",
-        phone: "+91 79956 72323",
-        timings: "10:00 AM - 8:30 PM (All 7 Days)",
-        amenities: ["On-Site Architect Consultation", "Full 3D Design Layout Presentation", "Precision German Blum Modular Joinery"]
-      }
-    ],
-    topSocieties: [
-      "Bangalore (Whitefield, Sarjapur Road, HSR Layout)",
-      "Bangalore (Electronic City, Bellandur, Hebbal)",
-      "Bangalore (Indiranagar, Koramangala)",
-      "Mysore (Vijayanagar, Gokulam)"
+      "Warangal & Karimnagar",
+      "Andhra Pradesh (Visakhapatnam, Vijayawada, Guntur)",
+      "Karnataka (Bangalore, Mysore)"
     ]
   }
 ];

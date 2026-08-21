@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { 
   MapPin, Phone, Clock, Sparkles, Building, CheckCircle2, 
   ArrowRight, ShieldCheck, Star, Users, Navigation 
@@ -6,86 +6,80 @@ import {
 import { useData } from '../context/DataContext';
 
 export default function CitiesPage({ open3DModal, openEstimatorModal }) {
-  const { cities, brand } = useData();
-  const [selectedCityId, setSelectedCityId] = useState(cities[0]?.id || 'hyderabad');
-
-  const selectedCity = (cities || []).find(c => c.id === selectedCityId) || cities[0] || {};
+  const { brand } = useData();
 
   return (
     <div className="pt-24 sm:pt-28 font-sans bg-[#FAF8F5] min-h-screen pb-20">
       
       {/* 1. HEADER */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FAF2ED] text-[#9B3F23] text-xs font-bold uppercase tracking-wider border border-[#E8CFCA] shadow-xs mb-3">
           <MapPin className="w-3.5 h-3.5" />
           <span>Serving Across Andhra Pradesh, Telangana &amp; Karnataka</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-serif font-bold text-[#1E2229]">
-          Our Branches &amp; Operational Network
+          Main Branch &amp; Regional Operations
         </h1>
         <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto mt-2.5">
-          Visit our flagship Hyderabad Experience Studio, or book an on-site architectural consultation in your city across Andhra Pradesh, Telangana, and Karnataka.
+          Visit our flagship Hyderabad Experience Studio, or schedule a doorstep 3D design consultation and turnkey installation anywhere across Andhra Pradesh, Telangana, and Karnataka.
         </p>
-
-        {/* State/Region Selector Pills */}
-        <div className="flex flex-wrap justify-center gap-2.5 mt-8">
-          {(cities || []).map((c) => (
-            <button
-              key={c.id}
-              onClick={() => setSelectedCityId(c.id)}
-              className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer flex items-center gap-2 ${
-                selectedCityId === c.id
-                  ? 'bg-[#9B3F23] text-white shadow-md scale-105'
-                  : 'bg-white text-gray-700 hover:bg-[#FAF2ED] hover:text-[#9B3F23] border border-[#E6DFD5]'
-              }`}
-            >
-              <Building className="w-3.5 h-3.5" />
-              <span>{c.name}</span>
-            </button>
-          ))}
-        </div>
       </div>
 
-      {/* 2. SELECTED CITY / REGION DIRECTORY */}
+      {/* 2. HYDERABAD MAIN BRANCH & EXPERIENCE STUDIO */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* City Overview Hero Card */}
+        {/* Main Flagship Hero Card */}
         <div className="bg-white rounded-3xl border border-[#E6DFD5] shadow-lg overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 sm:p-10 mb-12 items-center">
-          <div className="lg:col-span-6 space-y-4">
+          <div className="lg:col-span-6 space-y-4 text-left">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FAF2ED] text-[#9B3F23] text-xs font-bold border border-[#E8CFCA]">
-              <span>📍 {selectedCity.name}</span>
+              <span>📍 Hyderabad, Telangana</span>
               <span>•</span>
-              <span>{selectedCity.tag}</span>
+              <span>Headquarters &amp; Main Experience Studio</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-serif font-bold text-gray-900">
-              LivGruha in {selectedCity.state}
+              Hyderabad Main Office &amp; Experience Studio
             </h2>
 
-            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-              With over <strong>{selectedCity.homesCompleted}</strong> residences delivered, our design &amp; execution network provides certified master joinery, German Blum hardware, and dedicated project supervisors for guaranteed 21-day handovers.
+            <div className="space-y-2 text-xs sm:text-sm text-gray-700 font-medium">
+              <div className="flex items-start gap-2.5">
+                <MapPin className="w-4 h-4 text-[#9B3F23] shrink-0 mt-0.5" />
+                <span>2nd Floor, Manjeera Majestic Commercial Mall, JNTU Road, KPHB, Kukatpally, Hyderabad – 500072.</span>
+              </div>
+              <div className="flex items-center gap-2.5 text-gray-600">
+                <Clock className="w-4 h-4 text-[#9B3F23] shrink-0" />
+                <span>Timings: 10:00 AM – 8:30 PM (Open All 7 Days)</span>
+              </div>
+              <div className="flex items-center gap-2.5 text-[#9B3F23] font-bold">
+                <Phone className="w-4 h-4 text-[#9B3F23] shrink-0" />
+                <a href="tel:+917995672323" className="hover:underline">Helpline: +91 79956 72323</a>
+              </div>
+            </div>
+
+            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed pt-1">
+              Step into our full-scale display units to test genuine German Blum soft-close mechanisms, touch 500+ finishes, and interact with senior architects in person.
             </p>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+            <div className="grid grid-cols-3 gap-3 pt-2">
               <div className="bg-[#FAF8F5] p-3 rounded-2xl border border-[#E8CFCA] text-center">
                 <span className="text-xl font-serif font-bold text-[#9B3F23] block">
-                  {selectedCity.experienceCentersCount}
+                  3,200+
                 </span>
-                <span className="text-[11px] text-gray-500 font-semibold">Active Hubs</span>
+                <span className="text-[11px] text-gray-500 font-semibold">Homes Handed Over</span>
               </div>
 
               <div className="bg-[#FAF8F5] p-3 rounded-2xl border border-[#E8CFCA] text-center">
                 <span className="text-xl font-serif font-bold text-gray-900 block">
-                  {selectedCity.homesCompleted}
+                  21 Days
                 </span>
-                <span className="text-[11px] text-gray-500 font-semibold">Delivered Homes</span>
+                <span className="text-[11px] text-gray-500 font-semibold">Guaranteed Delivery</span>
               </div>
 
-              <div className="bg-[#FAF8F5] p-3 rounded-2xl border border-[#E8CFCA] text-center col-span-2 sm:col-span-1">
+              <div className="bg-[#FAF8F5] p-3 rounded-2xl border border-[#E8CFCA] text-center">
                 <span className="text-xl font-serif font-bold text-[#9B3F23] block">
                   4.94★
                 </span>
-                <span className="text-[11px] text-gray-500 font-semibold">Customer Rating</span>
+                <span className="text-[11px] text-gray-500 font-semibold">Client Rating</span>
               </div>
             </div>
 
@@ -109,112 +103,81 @@ export default function CitiesPage({ open3DModal, openEstimatorModal }) {
           </div>
 
           <div className="lg:col-span-6">
-            <div className="relative rounded-2xl overflow-hidden h-72 sm:h-80 shadow-md image-zoom-container">
+            <div className="relative rounded-2xl overflow-hidden h-72 sm:h-96 shadow-md image-zoom-container">
               <img
-                src={selectedCity.image}
-                alt={`${selectedCity.name} Cityscape`}
+                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=80"
+                alt="Hyderabad Flagship Center"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-5">
                 <p className="text-white text-xs font-semibold">
-                  Delivering dream home interiors across {selectedCity.name}.
+                  Hyderabad Flagship Experience Studio • 2nd Floor, Manjeera Majestic Commercial Mall, KPHB.
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Experience Studios Listing */}
+        {/* Tri-State Regional Coverage Matrix */}
         <div className="mb-14">
-          <h3 className="text-2xl font-serif font-bold text-gray-900 mb-6 flex items-center gap-2">
-            <span>Branch Office &amp; Operations Details</span>
-            <span className="text-xs font-sans font-semibold text-[#9B3F23] bg-[#FAF2ED] px-3 py-1 rounded-full border border-[#E8CFCA]">
-              Open 7 Days a Week
-            </span>
+          <h3 className="text-2xl font-serif font-bold text-gray-900 mb-6 text-center">
+            Serving Across Andhra Pradesh, Telangana &amp; Karnataka
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {(selectedCity.centers || []).map((center, idx) => (
-              <div
-                key={idx}
-                className="bg-white p-6 rounded-3xl border border-[#E6DFD5] shadow-sm hover:shadow-lg transition-all flex flex-col justify-between space-y-4"
-              >
-                <div className="space-y-3">
-                  <div className="w-10 h-10 rounded-2xl bg-[#FAF2ED] text-[#9B3F23] flex items-center justify-center font-bold text-sm">
-                    {idx + 1}
-                  </div>
-                  <h4 className="text-base font-serif font-bold text-gray-900">{center.name}</h4>
-                  <p className="text-xs text-gray-700 font-medium flex items-start gap-2">
-                    <MapPin className="w-4 h-4 text-[#9B3F23] shrink-0 mt-0.5" />
-                    <span>{center.address}</span>
-                  </p>
-
-                  <div className="text-xs text-gray-600 space-y-1.5 pt-2 border-t border-gray-100">
-                    <p className="flex items-center gap-1.5">
-                      <Clock className="w-3.5 h-3.5 text-gray-400" />
-                      <span>{center.timings}</span>
-                    </p>
-                    <p className="flex items-center gap-1.5 font-bold text-[#9B3F23]">
-                      <Phone className="w-3.5 h-3.5 text-[#9B3F23]" />
-                      <a href="tel:+917995672323" className="hover:underline">{center.phone}</a>
-                    </p>
-                  </div>
-
-                  {/* Studio Amenities */}
-                  <div className="pt-2">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1.5">
-                      Branch Features:
-                    </span>
-                    <div className="flex flex-wrap gap-1.5">
-                      {(center.amenities || []).map((am, i) => (
-                        <span key={i} className="text-[10px] px-2 py-0.5 rounded-md bg-[#FAF8F5] text-gray-700 border border-gray-200">
-                          ✓ {am}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pt-4 border-t border-gray-100 flex gap-2">
-                  <button
-                    onClick={open3DModal}
-                    className="flex-1 py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-[#9B3F23] hover:bg-[#83341C] transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-xs"
-                  >
-                    <span>Book 3D Design</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
-                  <a
-                    href="tel:+917995672323"
-                    className="py-2.5 px-3 rounded-xl text-xs font-bold text-[#9B3F23] bg-[#FAF2ED] hover:bg-[#F3E2D8] border border-[#E8CFCA] flex items-center justify-center"
-                    title="Call Branch"
-                  >
-                    <Phone className="w-3.5 h-3.5" />
-                  </a>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+            {/* Telangana */}
+            <div className="bg-white p-6 rounded-3xl border border-[#E6DFD5] shadow-sm space-y-3">
+              <div className="w-10 h-10 rounded-2xl bg-[#FAF2ED] text-[#9B3F23] flex items-center justify-center font-bold">
+                <Building className="w-5 h-5" />
               </div>
-            ))}
-          </div>
-        </div>
+              <h4 className="text-lg font-serif font-bold text-gray-900">Telangana</h4>
+              <p className="text-xs text-[#9B3F23] font-semibold">
+                Main Branch (Kukatpally) &amp; Statewide Service
+              </p>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                Hyderabad (KPHB, Hitec City, Gachibowli, Jubilee Hills, Secunderabad), Warangal, and Karimnagar.
+              </p>
+              <div className="pt-2 text-[11px] text-emerald-700 font-semibold flex items-center gap-1">
+                <CheckCircle2 className="w-3.5 h-3.5" />
+                <span>On-Site 3D Consultations &amp; 21-Day Execution</span>
+              </div>
+            </div>
 
-        {/* Communities / Locations Served in This State */}
-        <div className="bg-[#FAF2ED] border border-[#E8CFCA] rounded-3xl p-8 text-center space-y-4">
-          <h4 className="text-xl font-serif font-bold text-gray-900">
-            Key Cities &amp; Locations Served Across {selectedCity.name}
-          </h4>
-          <p className="text-xs sm:text-sm text-gray-600 max-w-xl mx-auto">
-            Our interior design &amp; execution teams manage on-site measurements and turnkey installations in:
-          </p>
+            {/* Andhra Pradesh */}
+            <div className="bg-white p-6 rounded-3xl border border-[#E6DFD5] shadow-sm space-y-3">
+              <div className="w-10 h-10 rounded-2xl bg-[#FAF2ED] text-[#9B3F23] flex items-center justify-center font-bold">
+                <Building className="w-5 h-5" />
+              </div>
+              <h4 className="text-lg font-serif font-bold text-gray-900">Andhra Pradesh</h4>
+              <p className="text-xs text-[#9B3F23] font-semibold">
+                Statewide Doorstep Service Coverage
+              </p>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                Visakhapatnam, Vijayawada, Guntur, Tirupati, Rajahmundry, Kakinada, and Nellore.
+              </p>
+              <div className="pt-2 text-[11px] text-emerald-700 font-semibold flex items-center gap-1">
+                <CheckCircle2 className="w-3.5 h-3.5" />
+                <span>Doorstep Measurements &amp; Modular Handover</span>
+              </div>
+            </div>
 
-          <div className="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto pt-2">
-            {(selectedCity.topSocieties || []).map((soc, i) => (
-              <span
-                key={i}
-                className="px-3.5 py-1.5 rounded-full bg-white text-gray-800 text-xs font-semibold border border-[#E8CFCA] shadow-sm flex items-center gap-1.5"
-              >
-                <Building className="w-3.5 h-3.5 text-[#9B3F23]" />
-                <span>{soc}</span>
-              </span>
-            ))}
+            {/* Karnataka */}
+            <div className="bg-white p-6 rounded-3xl border border-[#E6DFD5] shadow-sm space-y-3">
+              <div className="w-10 h-10 rounded-2xl bg-[#FAF2ED] text-[#9B3F23] flex items-center justify-center font-bold">
+                <Building className="w-5 h-5" />
+              </div>
+              <h4 className="text-lg font-serif font-bold text-gray-900">Karnataka</h4>
+              <p className="text-xs text-[#9B3F23] font-semibold">
+                Statewide Doorstep Service Coverage
+              </p>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                Bangalore (Whitefield, Sarjapur, HSR Layout, Electronic City, Hebbal) and Mysore.
+              </p>
+              <div className="pt-2 text-[11px] text-emerald-700 font-semibold flex items-center gap-1">
+                <CheckCircle2 className="w-3.5 h-3.5" />
+                <span>Direct Turnkey Delivery with German Blum Hardware</span>
+              </div>
+            </div>
           </div>
         </div>
 
